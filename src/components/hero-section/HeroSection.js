@@ -4,6 +4,10 @@ import React from 'react'
 import presentation from '../../media/presentation.svg'
 import background from '../../media/background-hero.jpg'
 import HeroPerspectiveWrapper from './HeroPerspectiveWrapper'
+
+const HERO_TEXT_SHADOW_X = 10,
+    HERO_TEXT_SHADOW_Y = 10
+
 const HeroSection = () => {
     const backgroundRef = React.useRef(null)
     const presentationRef = React.useRef(null)
@@ -15,8 +19,9 @@ const HeroSection = () => {
 
         const xPosition = event.pageX - halfWindowW,
             yPosition = halfWindowH - event.pageY - topOffset
+
         backgroundRef.current.style.filter = `hue-rotate(${Math.atan2(yPosition, xPosition) / Math.PI * 180}deg)`
-        presentationRef.current.style.filter = `hue-rotate(${Math.atan2(yPosition, xPosition) / Math.PI * 180}deg)`
+        presentationRef.current.style.filter = `hue-rotate(${Math.atan2(yPosition, xPosition) / Math.PI * 180}deg) drop-shadow(${HERO_TEXT_SHADOW_X * (-xPosition / halfWindowW)}px ${HERO_TEXT_SHADOW_Y * (yPosition / halfWindowH)}px 2px #ffffff55)`
 
     }, [])
 
@@ -30,9 +35,9 @@ const HeroSection = () => {
                 style={{
                     position: "absolute",
                     width: "400px",
-                    top: "40%",
-                    left: "0%",
-                    transform: "translateZ(20px)"
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%) translateZ(20px)"
                 }}
                 alt={""}
             />
