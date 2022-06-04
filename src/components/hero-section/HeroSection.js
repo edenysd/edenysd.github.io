@@ -1,7 +1,9 @@
 
 import React from 'react'
+import gsap from 'gsap/all'
 
-import presentation from '../../media/presentation.svg'
+
+import { ReactComponent as Presentation } from '../../media/presentation.svg'
 import background from '../../media/background-hero.jpg'
 import HeroPerspectiveWrapper from './HeroPerspectiveWrapper'
 
@@ -17,36 +19,43 @@ const HeroSection = () => {
         const halfWindowH = window.innerHeight * 0.5,
             halfWindowW = window.innerWidth * 0.5
 
-        const xPosition = event.pageX - halfWindowW,
-            yPosition = halfWindowH - event.pageY - topOffset
+        const xDeltaToCenter = event.pageX - halfWindowW,
+            yDeltaToCenter = halfWindowH - event.pageY - topOffset
 
-        backgroundRef.current.style.filter = `hue-rotate(${Math.atan2(yPosition, xPosition) / Math.PI * 180}deg)`
-        presentationRef.current.style.filter = `hue-rotate(${Math.atan2(yPosition, xPosition) / Math.PI * 180}deg) drop-shadow(${HERO_TEXT_SHADOW_X * (-xPosition / halfWindowW)}px ${HERO_TEXT_SHADOW_Y * (yPosition / halfWindowH)}px 2px #ffffff55)`
+        const { x: presentationX, width: presentationWidth, height: presentationHeight, y: presentationY } = presentationRef.current.getBoundingClientRect()
+        const xDeltaToPresentation = event.pageX - presentationX - presentationWidth / 2,
+            yDeltaToPresentation = event.pageY - presentationY - presentationHeight / 2
 
+        backgroundRef.current.style.filter = `hue-rotate(${Math.atan2(yDeltaToCenter, xDeltaToCenter) / Math.PI * 180}deg)`
+        presentationRef.current.style.filter = `hue-rotate(${Math.atan2(yDeltaToCenter, xDeltaToCenter) / Math.PI * 180}deg) drop-shadow(${HERO_TEXT_SHADOW_X * (-xDeltaToPresentation / halfWindowW)}px ${HERO_TEXT_SHADOW_Y * (-yDeltaToPresentation / halfWindowH)}px 2px #ffffff55)`
+
+    }, [])
+
+    React.useEffect(() => {
+        global.a = presentationRef.current
     }, [])
 
     return (
         <HeroPerspectiveWrapper
             processMouseMoveEvent={processMouseMoveEvent}
         >
-            <img
-                ref={presentationRef}
-                src={presentation}
+            <div
                 style={{
                     position: "absolute",
-                    width: "400px",
+                    height: "3em",
+                    width: "auto",
                     top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%) translateZ(20px)"
+                    left: "20%",
+                    transform: "translate(-20%, -50%) translateZ(20px)"
                 }}
-                alt={""}
-            />
-
+            >
+                <Presentation ref={presentationRef} />
+            </div >
             <img
                 ref={backgroundRef}
                 src={background}
                 style={{
-                    position: "absolute",
+                    position: "relative",
                     height: "110vh",
                     width: "110%",
                     objectFit: "cover",

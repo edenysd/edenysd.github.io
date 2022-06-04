@@ -19,14 +19,7 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
         if (rotateX < -maxRotationX) rotateX = -maxRotationX;
 
         figureRef.current.style.transform = "rotateX(" + rotateX + "deg ) rotateY(" + rotateY + "deg) translateZ(0)"
-
     }, [maxRotationX, maxRotationY])
-
-    const resetBackground = React.useCallback((event) => {
-
-        figureRef.current.style.transform = "rotateX(0deg) rotateY(0deg) translateZ(0)"
-
-    }, [])
 
     const handleMouseMoveEvent = React.useCallback((event) => {
         const topOffset = figureRef.current.offsetTop;
@@ -37,28 +30,43 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
     }, [processMouseMoveEvent, rotateBackground])
 
     return (
-        <div
-            style={{
-                width: "100%",
-                height: "100vh",
-                overflow: "hidden",
-                backgroundColor: "black",
-                perspective: perspective || "4000px"
-            }}>
-            <figure
-                ref={figureRef}
+        <div>
+            <div
                 style={{
                     width: "100%",
                     height: "100vh",
-                    transformStyle: "preserve-3d",
-                    margin: "0"
+                    overflow: "hidden",
+                    backgroundColor: "black",
+                    zIndex: "0",
+                    perspective: perspective || "4000px"
+                }}>
+                <figure
+                    ref={figureRef}
+                    style={{
+                        width: "100%",
+                        height: "100vh",
+                        transformStyle: "preserve-3d",
+                        margin: "0"
+                    }}
+                    onMouseMove={handleMouseMoveEvent}
+                >
+                    {children}
+                </figure>
+            </div >
+            <div
+                style={{
+                    width: "100%",
+                    height: "100vh",
+                    position: "absolute",
+                    left: "0",
+                    top: "0",
+                    margin: "0",
+                    pointerEvents: "none",
+                    background: "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(0,0,0,1))",
+                    zIndex: "1"
                 }}
-                onMouseMove={handleMouseMoveEvent}
-                onMouseLeave={resetBackground}
-            >
-                {children}
-            </figure>
-        </div >
+            ></div>
+        </div>
     )
 }
 
