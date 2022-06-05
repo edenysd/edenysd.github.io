@@ -46,13 +46,14 @@ const HeroSection = () => {
                     width: "70%",
                     height: "auto",
                     top: "50%",
+                    textSizeAdjust: "100%",
                     left: "20%",
                     transform: "translate(-20%, -50%) translateZ(20px)"
                 }}
             >
                 <Presentation
-                    width={"100%"}
                     ref={presentationRef}
+                    width={"100%"}
                 />
             </div >
             <div

@@ -33,6 +33,7 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
         <div>
             <div
                 style={{
+                    userSelect: "none",
                     width: "100%",
                     height: "100vh",
                     overflow: "hidden",
