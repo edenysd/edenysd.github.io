@@ -61,7 +61,7 @@ const HeroSection = () => {
                     position: "absolute",
                     top: "50%",
                     left: "80%",
-                    transform: "translate(-50%, -50%) translateZ(40px)"
+                    transform: "translate(-50%, -50%) translateZ(11px)"
                 }}
             >
                 <Phrase
