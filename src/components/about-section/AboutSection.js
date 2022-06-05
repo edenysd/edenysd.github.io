@@ -10,7 +10,6 @@ const AboutSection = () => {
                     color: "white"
                 }}
                 variant={"subtitle1"}>
-                Holaaaaaaaaaaaa
             </Typography>
         </>
     )

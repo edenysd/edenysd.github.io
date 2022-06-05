@@ -2,13 +2,14 @@
 import React from 'react'
 import gsap from 'gsap/all'
 
+import { ReactComponent as Presentation } from "../../media/presentation.svg"
 
-import { ReactComponent as Presentation } from '../../media/presentation.svg'
+import { ReactComponent as Phrase } from "../../media/hero-phrase.svg"
 import background from '../../media/background-hero.jpg'
 import HeroPerspectiveWrapper from './HeroPerspectiveWrapper'
 
-const HERO_TEXT_SHADOW_X = 10,
-    HERO_TEXT_SHADOW_Y = 10
+const HERO_TEXT_SHADOW_X = 2,
+    HERO_TEXT_SHADOW_Y = 2
 
 const HeroSection = () => {
     const backgroundRef = React.useRef(null)
@@ -27,7 +28,7 @@ const HeroSection = () => {
             yDeltaToPresentation = event.pageY - presentationY - presentationHeight / 2
 
         backgroundRef.current.style.filter = `hue-rotate(${Math.atan2(yDeltaToCenter, xDeltaToCenter) / Math.PI * 180}deg)`
-        presentationRef.current.style.filter = `hue-rotate(${Math.atan2(yDeltaToCenter, xDeltaToCenter) / Math.PI * 180}deg) drop-shadow(${HERO_TEXT_SHADOW_X * (-xDeltaToPresentation / halfWindowW)}px ${HERO_TEXT_SHADOW_Y * (-yDeltaToPresentation / halfWindowH)}px 2px #ffffff55)`
+        presentationRef.current.style.filter = /*`hue-rotate(${Math.atan2(yDeltaToCenter, xDeltaToCenter) / Math.PI * 180}deg)`+*/`drop-shadow(${HERO_TEXT_SHADOW_X * (xDeltaToPresentation / halfWindowW)}px ${HERO_TEXT_SHADOW_Y * (yDeltaToPresentation / halfWindowH)}px 2px #ffffff55)`
 
     }, [])
 
@@ -42,14 +43,29 @@ const HeroSection = () => {
             <div
                 style={{
                     position: "absolute",
-                    height: "3em",
-                    width: "auto",
+                    width: "70%",
+                    height: "auto",
                     top: "50%",
                     left: "20%",
                     transform: "translate(-20%, -50%) translateZ(20px)"
                 }}
             >
-                <Presentation ref={presentationRef} />
+                <Presentation
+                    width={"100%"}
+                    ref={presentationRef}
+                />
+            </div >
+            <div
+                style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "80%",
+                    transform: "translate(-50%, -50%) translateZ(40px)"
+                }}
+            >
+                <Phrase
+                    width={"40vw"}
+                />
             </div >
             <img
                 ref={backgroundRef}
