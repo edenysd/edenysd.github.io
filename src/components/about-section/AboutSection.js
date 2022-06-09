@@ -1,17 +1,14 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import AboutCard from './AboutCard'
+import AnimatedLayer from './AnimatedLayer'
 const AboutSection = () => {
 
     return (
-        <>
-            <Typography
-                sx={{
-                    background: "black",
-                    color: "white"
-                }}
-                variant={"subtitle1"}>
-            </Typography>
-        </>
+        <div className="flex items-center w-1/1 h-screen bg-black overflow-y-auto">
+            <AnimatedLayer />
+            <AboutCard />
+        </div>
+
     )
 }
 

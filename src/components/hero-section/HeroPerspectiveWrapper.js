@@ -31,23 +31,14 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
 
     return (
         <div>
-            <div
+            <div className="select-none w-auto h-full overflow-hidden bg-black z-0"
                 style={{
-                    userSelect: "none",
-                    width: "100%",
-                    height: "100vh",
-                    overflow: "hidden",
-                    backgroundColor: "black",
-                    zIndex: "0",
                     perspective: perspective || "4000px"
                 }}>
-                <figure
+                <figure className="w-11/10 h-screen"
                     ref={figureRef}
                     style={{
-                        width: "100%",
-                        height: "100vh",
-                        transformStyle: "preserve-3d",
-                        margin: "0"
+                        transformStyle: "preserve-3d"
                     }}
                     onMouseMove={handleMouseMoveEvent}
                 >
@@ -57,14 +48,13 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
             <div
                 style={{
                     width: "100%",
-                    height: "100vh",
+                    height: "101vh",
                     position: "absolute",
                     left: "0",
                     top: "0",
                     margin: "0",
                     pointerEvents: "none",
-                    background: "linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(0,0,0,1))",
-                    zIndex: "1"
+                    background: "linear-gradient(180deg, rgba(0,0,0,0) 75%, rgba(0,0,0,1)) "
                 }}
             ></div>
         </div>

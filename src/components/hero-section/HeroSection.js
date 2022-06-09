@@ -1,9 +1,8 @@
 
 import React from 'react'
-import gsap from 'gsap/all'
+//import gsap from 'gsap/all'
 
 import { ReactComponent as Presentation } from "../../media/presentation.svg"
-
 import { ReactComponent as Phrase } from "../../media/hero-phrase.svg"
 import background from '../../media/background-hero.jpg'
 import HeroPerspectiveWrapper from './HeroPerspectiveWrapper'
@@ -46,9 +45,8 @@ const HeroSection = () => {
                     width: "26vw",
                     height: "auto",
                     top: "50%",
-                    textSizeAdjust: "100%",
-                    left: "12%",
-                    transform: "translate(-20%, -50%) translateZ(20px)"
+                    left: "7%",
+                    transform: "translate(0%, -50%) translateZ(20px)"
                 }}
             >
                 <Presentation
@@ -59,7 +57,7 @@ const HeroSection = () => {
                 style={{
                     position: "absolute",
                     top: "50%",
-                    left: "80%",
+                    left: "75%",
                     transform: "translate(-50%, -50%) translateZ(11px)"
                 }}
             >
@@ -73,10 +71,12 @@ const HeroSection = () => {
                 style={{
                     position: "relative",
                     height: "110vh",
-                    width: "110%",
-                    objectFit: "cover",
-                    top: "-5%",
+                    width: "110vw",
+                    maxHeight: "110vh",
+                    maxWidth: "110vw",
                     left: "-5%",
+                    right: "-5%",
+                    objectFit: "cover",
                     transform: "translateZ(10px)"
                 }}
                 alt={""}
