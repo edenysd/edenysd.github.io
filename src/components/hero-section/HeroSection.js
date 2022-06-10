@@ -1,14 +1,14 @@
 
-import React from 'react'
-//import gsap from 'gsap/all'
+import React from "react"
 
-import { ReactComponent as Presentation } from "../../media/presentation.svg"
-import { ReactComponent as Phrase } from "../../media/hero-phrase.svg"
-import background from '../../media/background-hero.jpg'
-import HeroPerspectiveWrapper from './HeroPerspectiveWrapper'
+import HeroPerspectiveWrapper from "./HeroPerspectiveWrapper"
+import { ReactComponent as Presentation } from "../../media/sections/hero-section/presentation.svg"
+import { ReactComponent as Phrase } from "../../media/sections/hero-section/hero-phrase.svg"
+import background from "../../media/sections/hero-section/background-hero.jpg"
 
 const HERO_TEXT_SHADOW_X = 2,
     HERO_TEXT_SHADOW_Y = 2
+
 
 const HeroSection = () => {
     const backgroundRef = React.useRef(null)

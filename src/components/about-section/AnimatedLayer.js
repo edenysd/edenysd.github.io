@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react"
+
 
 const AnimatedLayer = () => {
-
     const canvasRef = React.useRef()
     const elementsRef = React.useRef([])
 
     React.useEffect(() => {
-
-
         const canvas = canvasRef.current
 
-        const ctx = canvas.getContext('2d')
+        const ctx = canvas.getContext("2d")
         let timer = null
 
         let canvasWidth = canvas.width = document.documentElement.clientWidth
@@ -64,9 +62,7 @@ const AnimatedLayer = () => {
                 if (particle.y > canvasHeight) particle.y = 0
             }
             timer = setTimeout(() => window.requestAnimationFrame(rainParticle), 100 / 20)
-
         }
-
 
         init()
         rainParticle()

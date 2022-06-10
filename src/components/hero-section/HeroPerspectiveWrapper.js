@@ -11,22 +11,22 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
 
         let rotateY = ((-event.pageX + halfWindowW) / halfWindowW) * maxRotationY,
             yPosition = event.pageY - topOffset,
-            rotateX = ((yPosition - halfWindowH) / halfWindowH) * maxRotationX;
+            rotateX = ((yPosition - halfWindowH) / halfWindowH) * maxRotationX
 
-        if (rotateY > maxRotationY) rotateY = maxRotationY;
-        if (rotateY < -maxRotationY) rotateY = -maxRotationY;
-        if (rotateX > maxRotationX) rotateX = maxRotationX;
-        if (rotateX < -maxRotationX) rotateX = -maxRotationX;
+        if (rotateY > maxRotationY) rotateY = maxRotationY
+        if (rotateY < -maxRotationY) rotateY = -maxRotationY
+        if (rotateX > maxRotationX) rotateX = maxRotationX
+        if (rotateX < -maxRotationX) rotateX = -maxRotationX
 
         figureRef.current.style.transform = "rotateX(" + rotateX + "deg ) rotateY(" + rotateY + "deg) translateZ(0)"
     }, [maxRotationX, maxRotationY])
 
     const handleMouseMoveEvent = React.useCallback((event) => {
-        const topOffset = figureRef.current.offsetTop;
+        const topOffset = figureRef.current.offsetTop
         window.requestAnimationFrame(function () {
-            rotateBackground(event, topOffset);
+            rotateBackground(event, topOffset)
             processMouseMoveEvent(event, topOffset)
-        });
+        })
     }, [processMouseMoveEvent, rotateBackground])
 
     return (
