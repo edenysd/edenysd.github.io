@@ -12,16 +12,16 @@ const AnimatedLayer = () => {
         let timer = null
 
         let canvasWidth = canvas.width = document.documentElement.clientWidth
-        let canvasHeight = canvas.height = document.documentElement.clientHeight
-        let numberOfParticles = canvasHeight / 20
-        let velocity = canvasHeight / 100
+        let canvasHeight = canvas.height = document.documentElement.clientHeight * 2
+        let numberOfParticles = canvasHeight / 10
+        let velocity = canvasHeight / 200
         let size = canvasHeight / 500
 
         window.addEventListener("resize", function () {
             canvasWidth = canvas.width = document.documentElement.clientWidth
-            canvasHeight = canvas.height = document.documentElement.clientHeight
-            numberOfParticles = canvasHeight / 20
-            velocity = canvasHeight / 100
+            canvasHeight = canvas.height = document.documentElement.clientHeight * 2
+            numberOfParticles = canvasHeight / 10
+            velocity = canvasHeight / 200
             size = canvasHeight / 500
         })
 
@@ -41,7 +41,7 @@ const AnimatedLayer = () => {
         }
 
         const drawParticle = (cx, cy, long) => {
-            ctx.fillStyle = "white"
+            ctx.fillStyle = cy < (canvasHeight / 2) ? "white" : "black"
             ctx.lineWidth = long / 20
             ctx.arc(cx, cy, long, 0, 2 * Math.PI)
         }

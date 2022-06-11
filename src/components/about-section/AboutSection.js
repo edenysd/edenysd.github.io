@@ -5,10 +5,10 @@ import AnimatedLayer from "./AnimatedLayer"
 
 const AboutSection = () => {
     return (
-        <div className="flex items-center w-1/1 h-screen bg-black overflow-y-auto">
+        <div className="flex items-start w-1/1 h-screen bg-black overflow-y-auto CustomScrollBar">
             <AnimatedLayer />
             <AboutCard />
-        </div>
+        </div >
     )
 }
 
