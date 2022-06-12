@@ -1,12 +1,12 @@
 
 import React from "react"
-import gsap from "gsap/all"
 
 
 const ProjectGithubCard = ({ title, description, github, media, className }) => {
     const [state, setState] = React.useState({
         loading: true,
         languages: null,
+        topics: null
     })
 
     React.useEffect(() => {
@@ -32,7 +32,7 @@ const ProjectGithubCard = ({ title, description, github, media, className }) => 
 
             })
 
-        fetch(`https://api.github.com/repos/${github.owner}/${github.repo}/languages`)
+        fetch(`https://api.github.com/repos/${github.owner}/${github.repo}/topics`)
             .then((data) => {
                 return data.json()
             })
@@ -43,25 +43,17 @@ const ProjectGithubCard = ({ title, description, github, media, className }) => 
                 }))
             })
 
-        fetch(`https://api.github.com/repos/${github.owner}/${github.repo}/contents/${github.mediaPath}`)
-            .then((data) => {
-                return data.json()
-            })
-            .then((media) => {
-                console.log(media)
-                setState((oldState) => ({
-                    ...oldState,
-                    media: media
-                }))
-            })
 
-    }, [github])
+
+    }, [github, media])
 
     return (
-        <div className={"h-auto w-full sm:w-1/4 sm:3 flex items-start p-3"}>
-            <div className={"w-full h-auto flex flex-col items-center p-2 rounded-md shadow-sm shadow-black"}>
-                <img className={"flex h-full w-auto"} style={{ objectFit: "cover" }} src={media} alt={"examples"} />
-                state
+        <div className={"h-auto w-full sm:w-4/12 flex items-start p-2"}>
+            <div className={"w-full h-fit select-none flex flex-col items-center p-2  shadow-sm shadow-black backdrop-blur-sm hover:backdrop-blur-0 hover:shadow-md hover:shadow-black active:bg-semizinc active:shadow-none active:sepia active:backdrop-blur-sm"}>
+                <img className={"flex h-1/3 w-full"} style={{ objectFit: "cover" }} src={media ? media[0] : ""} alt={"examples"} />
+                <div className={"h-full w-auto"}>
+                    {JSON.stringify(state)}
+                </div>
             </div>
         </div >
     )

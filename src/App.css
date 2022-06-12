@@ -36,6 +36,7 @@
         transform: rotate(360deg);
     }
 }
+
 /* width */
 .CustomScrollBar::-webkit-scrollbar {
     width: 10px;
@@ -43,7 +44,7 @@
 
 /* Track */
 .CustomScrollBar::-webkit-scrollbar-track {
-    background: black;
+    background: transparent;
 }
 
 /* Handle */
