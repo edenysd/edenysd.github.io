@@ -11,21 +11,31 @@ const AnimatedLayer = () => {
         const ctx = canvas.getContext("2d")
         let timer = null
 
-        let canvasWidth = canvas.width = document.documentElement.clientWidth
-        let canvasHeight = canvas.height = document.documentElement.clientHeight * 2
-        let numberOfParticles = canvasHeight / 10
-        let velocity = canvasHeight / 200
-        let size = canvasHeight / 500
 
-        window.addEventListener("resize", function () {
-            canvasWidth = canvas.width = document.documentElement.clientWidth
-            canvasHeight = canvas.height = document.documentElement.clientHeight * 2
-            numberOfParticles = canvasHeight / 10
-            velocity = canvasHeight / 200
-            size = canvasHeight / 500
-        })
+        const { width, height } = canvas.getBoundingClientRect()
+        let canvasWidth = canvas.width = width
+        let canvasHeight = canvas.height = height
+        let clientHeight = document.documentElement.clientHeight
+        let numberOfParticles = canvasWidth / 10
+        let velocity = canvasWidth / 400
+        let size = canvasWidth / 500
+
+        const observer = new ResizeObserver(async () => {
+            const { width, height } = canvas.getBoundingClientRect()
+            canvasWidth = canvas.width = width
+            canvasHeight = canvas.height = height
+            clientHeight = document.documentElement.clientHeight
+
+
+            numberOfParticles = canvasWidth / 10
+            velocity = canvasWidth / 400
+            size = canvasWidth / 500
+
+            init()
+        }).observe(canvas)
 
         const init = () => {
+            elementsRef.current = []
             for (let i = 0; i < numberOfParticles; i++) {
                 const distance = Math.random()
                 const toX = Math.random() - 0.5
@@ -41,7 +51,7 @@ const AnimatedLayer = () => {
         }
 
         const drawParticle = (cx, cy, long) => {
-            ctx.fillStyle = cy < (canvasHeight / 2) ? "white" : "black"
+            ctx.fillStyle = cy < (clientHeight) ? "white" : "black"
             ctx.lineWidth = long / 20
             ctx.arc(cx, cy, long, 0, 2 * Math.PI)
         }
@@ -68,11 +78,13 @@ const AnimatedLayer = () => {
         rainParticle()
 
         return () => {
+            elementsRef.current = null
             clearTimeout(timer)
+            observer?.disconnect()
         }
     }, [])
 
-    return <canvas className="absolute" ref={canvasRef} />
+    return <canvas className={"w-full h-full absolute left-0 top-0"} ref={canvasRef} />
 }
 
 export default AnimatedLayer
