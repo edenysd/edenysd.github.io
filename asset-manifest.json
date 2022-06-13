@@ -1,19 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f2e54bb.css",
-    "main.js": "/static/js/main.40ae14b9.js",
+    "main.css": "/static/css/main.ef06e73a.css",
+    "main.js": "/static/js/main.e5878be4.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/background-hero.jpg": "/static/media/background-hero.83117f9dbe6b8eea275b.jpg",
+    "static/media/preview.jpg": "/static/media/preview.a0b3762cf735745f5361.jpg",
+    "static/media/preview3.png": "/static/media/preview3.0c26cf3b9df810ef407a.png",
+    "static/media/preview2.png": "/static/media/preview2.7bf5928c9aa93c8e92d1.png",
+    "static/media/preview1.png": "/static/media/preview1.6147c48f9ead8a6a766d.png",
     "static/media/profile-photo.jpg": "/static/media/profile-photo.7ec36341b0785a0378d8.jpg",
+    "static/media/splash.png": "/static/media/splash.644ed4dff1abcb95f9ff.png",
+    "static/media/logo.png": "/static/media/logo.03b46e9ab0a1477985f8.png",
+    "static/media/gato_bravo.png": "/static/media/gato_bravo.d85e6b45bbc43f6d70bf.png",
     "static/media/hero-phrase.svg": "/static/media/hero-phrase.22ceb66b46ea8d3581974ac9ee0eea20.svg",
     "index.html": "/index.html",
     "static/media/presentation.svg": "/static/media/presentation.cd50214d61aa7592f935f05a5fb29f7b.svg",
-    "main.9f2e54bb.css.map": "/static/css/main.9f2e54bb.css.map",
-    "main.40ae14b9.js.map": "/static/js/main.40ae14b9.js.map",
+    "main.ef06e73a.css.map": "/static/css/main.ef06e73a.css.map",
+    "main.e5878be4.js.map": "/static/js/main.e5878be4.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f2e54bb.css",
-    "static/js/main.40ae14b9.js"
+    "static/css/main.ef06e73a.css",
+    "static/js/main.e5878be4.js"
   ]
 }
