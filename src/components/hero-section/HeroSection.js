@@ -70,12 +70,12 @@ const HeroSection = () => {
                 src={background}
                 style={{
                     position: "relative",
-                    height: "110vh",
+                    height: "105vh",
                     width: "110vw",
                     maxHeight: "110vh",
                     maxWidth: "110vw",
                     left: "-5%",
-                    right: "-5%",
+                    top: "-5%",
                     objectFit: "cover",
                     transform: "translateZ(10px)"
                 }}
