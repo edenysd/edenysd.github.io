@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.04611b7e.css",
-    "main.js": "/static/js/main.9dee6315.js",
+    "main.css": "/static/css/main.e42ded82.css",
+    "main.js": "/static/js/main.e52daa42.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/background-hero.jpg": "/static/media/background-hero.83117f9dbe6b8eea275b.jpg",
     "static/media/preview.jpg": "/static/media/preview.a0b3762cf735745f5361.jpg",
@@ -12,15 +12,16 @@
     "static/media/splash.png": "/static/media/splash.644ed4dff1abcb95f9ff.png",
     "static/media/logo.png": "/static/media/logo.03b46e9ab0a1477985f8.png",
     "static/media/gato_bravo.png": "/static/media/gato_bravo.d85e6b45bbc43f6d70bf.png",
+    "static/media/logo.svg": "/static/media/logo.cd6c3e959f0cdd2114cda3440df544ea.svg",
     "static/media/hero-phrase.svg": "/static/media/hero-phrase.22ceb66b46ea8d3581974ac9ee0eea20.svg",
     "index.html": "/index.html",
     "static/media/presentation.svg": "/static/media/presentation.cd50214d61aa7592f935f05a5fb29f7b.svg",
-    "main.04611b7e.css.map": "/static/css/main.04611b7e.css.map",
-    "main.9dee6315.js.map": "/static/js/main.9dee6315.js.map",
+    "main.e42ded82.css.map": "/static/css/main.e42ded82.css.map",
+    "main.e52daa42.js.map": "/static/js/main.e52daa42.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.04611b7e.css",
-    "static/js/main.9dee6315.js"
+    "static/css/main.e42ded82.css",
+    "static/js/main.e52daa42.js"
   ]
 }
