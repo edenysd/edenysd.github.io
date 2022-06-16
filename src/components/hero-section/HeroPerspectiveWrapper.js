@@ -31,7 +31,9 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
 
     return (
         <div>
-            <div className="select-none w-auto h-full overflow-hidden bg-black z-0"
+            <div
+                className="select-none w-auto h-full overflow-hidden bg-black z-0"
+                id={"hero-section"}
                 style={{
                     perspective: perspective || "4000px"
                 }}>

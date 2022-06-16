@@ -5,7 +5,7 @@ import ProjectGithubCard from "./ProjectGithubCard"
 
 const ProjectsSection = () => {
     return (
-        <div className="flex h-auto min-h-screen flex-col w-full p-3">
+        <div className="flex h-auto min-h-screen flex-col w-full p-3" id="projects-section">
             <p className="py-8 text-6xl font-serif">
                 Recent Projects
             </p>
