@@ -1,7 +1,9 @@
-import { gsap } from "gsap/all"
 import React from "react"
+import { gsap } from "gsap/all"
 import { ReactComponent as Logo } from "../../media/logo.svg"
 import NavBarButtonSection from "./NavBarButtonSection"
+import MyCV from "../../media/my_cv.pdf"
+
 
 const SECTIONS = [
     {
@@ -11,6 +13,10 @@ const SECTIONS = [
     {
         sectionId: "projects-section",
         sectionName: "PROJECTS"
+    },
+    {
+        sectionId: "contactme-section",
+        sectionName: "CONTACT ME"
     }
 ]
 
@@ -36,7 +42,6 @@ const NavBarLayer = () => {
 
         let lastYscroll = 0
         let lastDiff = 0
-
         const scrollHandler = (e) => {
             if (timer) {
                 clearTimeout(timer)
@@ -52,19 +57,23 @@ const NavBarLayer = () => {
             }
             lastDiff = diff
             lastYscroll = window.scrollY
-            console.log(navRef)
             if (window.scrollY === 0) {
+                gsap.to(navRef.current, {
+                    background: "transparent"
+                })
                 navRef.current.classList.remove("backdrop-blur-sm")
                 navRef.current.classList.remove("bg-transparentBlack")
                 navRef.current.classList.add("backdrop-blur-none")
                 navRef.current.classList.add("bg-transparent")
             }
             else {
+                gsap.to(navRef.current, {
+                    background: "rgba(0,0,0,0.3)"
+                })
                 navRef.current.classList.remove("backdrop-blur-none")
                 navRef.current.classList.remove("bg-transparent")
                 navRef.current.classList.add("backdrop-blur-sm")
                 navRef.current.classList.add("bg-transparentBlack")
-
             }
         }
 
@@ -76,17 +85,45 @@ const NavBarLayer = () => {
                 clearTimeout(timer)
             }
         }
-        
+
     }, [])
     return (
         <nav ref={navRef} className="flex flex-row items-center backdrop-blur-sm bg-transparentBlack w-full h-16  fixed z-10 pointer-events-none">
-            <div className={"h-full w-64 py-3"}>
-                <a className="h-full w-auto m-auto pointer-events-auto" href="#hero-section">
-                    <Logo width={"4em"} height={"100%"}
+            <div className={"flex flex-row h-full w-64 py-3 items-center"}>
+                <a
+                    className="h-full w-auto m-auto pointer-events-auto"
+                    href="#hero-section"
+                    onMouseEnter={
+                        (e) => {
+                            gsap.to(e.target, {
+                                filter: "drop-shadow(5px 5px 2px #a3a)"
+                            })
+                        }
+                    }
+                    onMouseLeave={
+                        (e) => {
+                            gsap.to(e.target, {
+                                filter: "drop-shadow(0px 0px 0px #a3a)"
+                            })
+                        }
+                    }
+                >
+                    <Logo
+                        className="pointer-events-none"
+                        width={"4em"}
+                        height={"100%"}
                         style={{
                             margin: "auto"
                         }}
                     />
+                </a>
+                <a
+                    className="group nav-link p-3 hover:bg-lime-200 active:bg-gray-800 pointer-events-auto font-semibold px-3"
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                    href={MyCV}
+                >
+                    <span className="w-fit text-lime-200 group-hover:text-black">GET CV</span>
                 </a>
             </div>
             <div className="flex flex-row w-full h-full font-semibold px-3">
