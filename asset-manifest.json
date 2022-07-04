@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ca1849af.css",
-    "main.js": "/static/js/main.8cd56734.js",
+    "main.js": "/static/js/main.141f5427.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/background-hero.jpg": "/static/media/background-hero.83117f9dbe6b8eea275b.jpg",
     "static/media/preview.jpg": "/static/media/preview.a0b3762cf735745f5361.jpg",
@@ -17,15 +17,15 @@
     "static/media/github.svg": "/static/media/github.1b41436d40dc97c93b722ecad65d50dd.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.6fce41f4632373a805cc9a71c83b989e.svg",
     "static/media/gmail.svg": "/static/media/gmail.26901d5ce62f22013d8fc226d70f127b.svg",
-    "static/media/hero-phrase.svg": "/static/media/hero-phrase.7580ba46c6671c59f303823dc3deb6f8.svg",
+    "static/media/hero-phrase.svg": "/static/media/hero-phrase.67ba68b37acda774d89e814ef5795b73.svg",
     "index.html": "/index.html",
     "static/media/presentation.svg": "/static/media/presentation.e4f2d5a2680ad2018ae3faac1aa575c9.svg",
     "main.ca1849af.css.map": "/static/css/main.ca1849af.css.map",
-    "main.8cd56734.js.map": "/static/js/main.8cd56734.js.map",
+    "main.141f5427.js.map": "/static/js/main.141f5427.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca1849af.css",
-    "static/js/main.8cd56734.js"
+    "static/js/main.141f5427.js"
   ]
 }
