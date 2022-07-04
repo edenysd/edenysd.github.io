@@ -15,21 +15,24 @@ const AnimatedLayer = () => {
         const { width, height } = canvas.getBoundingClientRect()
         let canvasWidth = canvas.width = width
         let canvasHeight = canvas.height = height
+        let canvasMaxDimension = Math.max(canvasWidth,canvasHeight)
         let clientHeight = document.documentElement.clientHeight
-        let numberOfParticles = canvasWidth / 10
-        let velocity = canvasWidth / 400
-        let size = canvasWidth / 500
+        let numberOfParticles = canvasMaxDimension / 10
+        let velocity = canvasMaxDimension / 400
+        let size = canvasMaxDimension / 500
 
         const observer = new ResizeObserver(async () => {
             const { width, height } = canvas.getBoundingClientRect()
             canvasWidth = canvas.width = width
             canvasHeight = canvas.height = height
+            canvasMaxDimension = Math.max(canvasWidth, canvasHeight)
+            
             clientHeight = document.documentElement.clientHeight
 
 
-            numberOfParticles = canvasWidth / 10
-            velocity = canvasWidth / 400
-            size = canvasWidth / 500
+            numberOfParticles = canvasMaxDimension / 10
+            velocity = canvasMaxDimension / 400
+            size = canvasMaxDimension / 500
 
             init()
         }).observe(canvas)
@@ -41,7 +44,7 @@ const AnimatedLayer = () => {
                 const toX = Math.random() - 0.5
                 const toY = (Math.random() + 1) * 3 / 3
                 elementsRef.current[i] = {
-                    x: Math.ceil(Math.random() * canvasWidth),
+                    x: Math.ceil(Math.random() * canvasMaxDimension),
                     y: Math.ceil(Math.random() * canvasHeight),
                     toX: toX / Math.sqrt(toY * toY + toX * toX) * distance * velocity,
                     toY: toY / Math.sqrt(toY * toY + toX * toX) * distance * velocity,
@@ -50,7 +53,7 @@ const AnimatedLayer = () => {
             }
         }
 
-        function drawStarParticle(cx, cy, spikes, outerRadius, innerRadius, fillStyle = "skyblue", strokeStyle = "blue") {
+        const drawStarParticle = (cx, cy, spikes, outerRadius, innerRadius, fillStyle = "skyblue", strokeStyle = "blue") => {
             let rot = Math.PI / 2 * 3
             let x = cx
             let y = cy
@@ -112,13 +115,13 @@ const AnimatedLayer = () => {
             else {
                 particle.y = particle.y + Math.sqrt(particle.toX * particle.toX + particle.toY * particle.toY) * 5
             }
-            if (particle.x > canvasWidth) particle.x = 0
-            if (particle.x < 0) particle.x = canvasWidth
+            if (particle.x > canvasMaxDimension) particle.x = 0
+            if (particle.x < 0) particle.x = canvasMaxDimension
             if (particle.y > canvasHeight) particle.y = 0
         }
 
         const rainParticle = () => {
-            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+            ctx.clearRect(0, 0, canvasMaxDimension, canvasHeight)
 
             for (let i = 0; i < numberOfParticles; i++) {
                 const particle = elementsRef.current[i]

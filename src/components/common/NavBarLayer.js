@@ -88,7 +88,7 @@ const NavBarLayer = () => {
 
     }, [])
     return (
-        <nav ref={navRef} className="flex flex-row items-center backdrop-blur-sm bg-transparentBlack w-full h-16  fixed z-10 pointer-events-none">
+        <nav ref={navRef} className="flex flex-row items-center text-sm sm:text-base backdrop-blur-sm bg-transparentBlack w-full h-16 fixed z-10 pointer-events-none">
             <div className={"flex flex-row h-full w-64 py-3 items-center"}>
                 <a
                     className="h-full w-auto m-auto pointer-events-auto"
@@ -132,7 +132,7 @@ const NavBarLayer = () => {
                     {
                         SECTIONS.map(
                             (section) => (
-                                <li className="flex w-fit items-center mx-1" key={section.sectionId}>
+                                <li className="flex w-fit items-center mx-0 sm:mx-1" key={section.sectionId}>
                                     <NavBarButtonSection
                                         sectionId={section.sectionId}
                                         sectionName={section.sectionName}

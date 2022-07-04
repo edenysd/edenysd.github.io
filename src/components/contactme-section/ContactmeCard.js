@@ -50,7 +50,7 @@ const ContactmeCard = ({ title, description, github, media, className }) => {
                     {...eventMap}
                 >
                     <LinkedinLogo
-                        className="h-32 w-32 pointer-events-none"
+                        className="h-16 w-16 sm:h-32 sm:w-32 pointer-events-none"
                     />
                 </a>
                 <a
@@ -61,7 +61,7 @@ const ContactmeCard = ({ title, description, github, media, className }) => {
                     {...eventMap}
                 >
                     <GithubLogo
-                        className="h-32 w-32 pointer-events-none"
+                        className="h-16 w-16 sm:h-32 sm:w-32 pointer-events-none"
                     />
                 </a>
                 <a
@@ -72,7 +72,7 @@ const ContactmeCard = ({ title, description, github, media, className }) => {
                     {...eventMap}
                 >
                     <GmailLogo
-                        className="h-32 w-32 pointer-events-none"
+                        className="h-16 w-16 sm:h-32 sm:w-32 pointer-events-none"
                     />
                 </a>
             </div>
