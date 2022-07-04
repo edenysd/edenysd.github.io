@@ -15,25 +15,26 @@ const AnimatedLayer = () => {
         const { width, height } = canvas.getBoundingClientRect()
         let canvasWidth = canvas.width = width
         let canvasHeight = canvas.height = height
-        let canvasMaxDimension = Math.max(canvasWidth,canvasHeight)
+        let canvasMaxDimension = Math.max(canvasWidth, canvasHeight)
         let clientHeight = document.documentElement.clientHeight
         let numberOfParticles = canvasMaxDimension / 10
         let velocity = canvasMaxDimension / 400
         let size = canvasMaxDimension / 500
 
-        const observer = new ResizeObserver(async () => {
+        const updateValues = () => {
             const { width, height } = canvas.getBoundingClientRect()
             canvasWidth = canvas.width = width
             canvasHeight = canvas.height = height
             canvasMaxDimension = Math.max(canvasWidth, canvasHeight)
-            
             clientHeight = document.documentElement.clientHeight
-
-
             numberOfParticles = canvasMaxDimension / 10
             velocity = canvasMaxDimension / 400
             size = canvasMaxDimension / 500
+        }
+        updateValues()
 
+        const observer = new ResizeObserver(async () => {
+            updateValues()
             init()
         }).observe(canvas)
 
@@ -89,9 +90,6 @@ const AnimatedLayer = () => {
             }
             else if (cy > canvasHeight - clientHeight) {
                 drawStarParticle(cx, cy, 5, long * 2, long / 2, "white", "white")
-                //ctx.fillStyle = "white"
-                //ctx.lineWidth = long / 20
-                //ctx.arc(cx, cy, long, 0, 2 * Math.PI)
             }
             else {
                 ctx.strokeStyle = "black"

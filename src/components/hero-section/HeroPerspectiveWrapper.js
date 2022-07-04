@@ -40,7 +40,6 @@ const HeroPerspectiveWrapper = ({ perspective, children, processMouseMoveEvent =
                 <figure className="w-11/10 h-11/10"
                     ref={figureRef}
                     style={{
-
                         height: "100vh",
                         width: "110vw",
                         maxHeight: "105vh",

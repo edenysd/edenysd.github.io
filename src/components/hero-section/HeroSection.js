@@ -31,40 +31,29 @@ const HeroSection = () => {
 
     }, [])
 
-    React.useEffect(() => {
-        global.a = presentationRef.current
-    }, [])
-
     return (
         <HeroPerspectiveWrapper
             processMouseMoveEvent={processMouseMoveEvent}
         >
-            <div
-                style={{
-                    position: "absolute",
-                    width: "26vw",
-                    height: "auto",
-                    top: "50%",
-                    left: "7%",
-                    transform: "translate(0%, -50%) translateZ(20px)"
-                }}
-            >
-                <Presentation
-                    ref={presentationRef}
-                />
-            </div >
-            <div
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "75%",
-                    transform: "translate(-50%, -50%) translateZ(11px)"
-                }}
-            >
-                <Phrase
-                    width={"40vw"}
-                />
-            </div >
+            <div className="absolute w-screen h-screen align-middle flex p-16 flex-col sm:flex-row justify-center sm:justify-between" style={{ transform: "translateZ(50px)" }}>
+
+                <div className="flex pb-3 items-end sm:items-center"
+                    style={{
+                        transform: "translateZ(20px)",
+                    }}
+                >
+                    <Presentation className="w-full"
+                        ref={presentationRef}
+                    />
+                </div >
+                <div className="flex items-top  sm:items-center"
+                    style={{
+                        transform: " translateZ(11px)"
+                    }}
+                >
+                    <Phrase className="w-full" />
+                </div >
+            </div>
             <img
                 ref={backgroundRef}
                 src={background}
