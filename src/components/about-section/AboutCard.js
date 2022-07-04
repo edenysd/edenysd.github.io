@@ -13,7 +13,7 @@ export default function AboutCard() {
             </p>
             <p className="text-lime-50 font-normal font-mono mb-1 overflow-y-auto">
               I have a career in competitive programming of more than eight years,
-              I am currently working as a frontend developer specialized in ReactJS
+              I am currently working as a frontend developer specialized
               and I must say that I am pasionate about client-side rendering optimization.
             </p>
             <p className="text-lime-50 font-normal font-mono mb-1 overflow-y-auto">
