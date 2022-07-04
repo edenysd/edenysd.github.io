@@ -13,8 +13,7 @@ export default function AboutCard() {
             </p>
             <p className="text-lime-50 font-normal font-mono mb-1 overflow-y-auto">
               I have a career in competitive programming of more than eight years,
-              I am currently working as a frontend developer specialized
-              and I must say that I am pasionate about client-side rendering optimization.
+              I am currently working as a frontend developer.
             </p>
             <p className="text-lime-50 font-normal font-mono mb-1 overflow-y-auto">
               My free time is usually spent with family and friends, or reading something on the Internet.
