@@ -1,28 +1,21 @@
-
-import React from "react"
-import { projects } from "../../conf"
-import ProjectGithubCard from "./ProjectGithubCard"
+import React from "react";
+import { projects } from "../../conf";
+import ProjectGithubCard from "./ProjectGithubCard";
 
 const ProjectsSection = () => {
-    return (
-        <div className="flex h-auto min-h-screen flex-col w-full p-3" id="projects-section">
-            <p className="py-8 text-6xl font-serif">
-                Recent Projects
-            </p>
-            <div className="flex relative w-full h-full flex-row flex-wrap">
-                {
-                    projects.map(
-                        (project) => (
-                            <ProjectGithubCard
-                                key={project.title}
-                                {...project}
-                            />
-                        )
-                    )
-                }
-            </div>
-        </div >
-    )
-}
+  return (
+    <div
+      className="flex dynamic-w-screen min-dynamic-w-screen flex-col w-full p-3"
+      id="projects-section"
+    >
+      <p className="py-8 text-6xl font-serif">Recent Projects</p>
+      <div className="flex relative w-full h-full flex-row flex-wrap">
+        {projects.map((project) => (
+          <ProjectGithubCard key={project.title} {...project} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default ProjectsSection
+export default ProjectsSection;

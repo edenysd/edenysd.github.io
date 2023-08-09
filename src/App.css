@@ -61,3 +61,26 @@ html {
 .CustomScrollBar::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+.dynamic-full-screen  {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    width: 100dvw;
+
+}
+
+.dynamic-h-screen{
+    height: 100vh;
+    height: 100dvh;
+}
+
+.min-dynamic-h-screen{
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.dynamic-w-screen{
+    width: 100vw;
+    width: 100dvw;
+}
