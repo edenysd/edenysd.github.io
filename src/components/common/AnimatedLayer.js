@@ -136,7 +136,7 @@ const AnimatedLayer = () => {
       }
       timer = setTimeout(
         () => window.requestAnimationFrame(rainParticle),
-        100 / 20
+        100 / 10
       );
     };
 
