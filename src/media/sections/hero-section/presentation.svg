@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="350px" height="130" viewbox="0 30 350 100" xmlns="http://www.w3.org/2000/svg">
-  <text style="fill: rgb(182, 182, 182); font-family: Literata; font-size: 60px; font-weight: 100; white-space: pre;" id="svg_1"><tspan style="paint-order: fill; stroke-width: 0px; vector-effect: non-scaling-stroke;" x="0" y="70%">Hi! I'm </tspan><tspan style="font-weight: 400; fill: rgb(220, 250, 220);" x=0 dy="50%">Edenys Deniz</tspan></text>
+<svg width="350px" height="130" viewbox="0 40 350 120" xmlns="http://www.w3.org/2000/svg">
+  <text style="fill: rgb(247 247 247); font-family: Literata; font-size: 60px; font-weight: 400; white-space: pre;"
+    id="svg_1">
+    <tspan style="paint-order: fill; font-weight: 600;  stroke-width: 0px; vector-effect: non-scaling-stroke;" x="0"
+      y="70%">Hi! I'm
+    </tspan>
+    <tspan style="font-weight: 600; fill: rgb(164 237 185);" x=0 dy="50%">
+      <tspan>E</tspan>denis <tspan>D</tspan>enis
+    </tspan>
+  </text>
 </svg>
