@@ -7,8 +7,20 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
   const textRef = React.useRef(null);
 
   React.useEffect(() => {
-    const createAnimation = () =>
-      gsap.to(barRef.current, {
+    const animation = { trigger: null, isVisible: false };
+
+    const showIfVisible = () => {
+      animation.isVisible
+        ? animation.trigger.play()
+        : animation.trigger.reverse();
+    };
+
+    const createAnimation = () => {
+      if (animation.trigger) {
+        animation.trigger.kill();
+      }
+
+      animation.trigger = gsap.to(barRef.current, {
         duration: 1,
         width:
           (totalBarRef.current.getBoundingClientRect().width * progress) / 100,
@@ -25,14 +37,15 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
         onComplete: () => {
           textRef.current.innerText = textGenerator(progress);
         },
+        paused: true,
       });
-
-    let tween = createAnimation();
-    tween.pause();
+    };
+    createAnimation();
 
     const callbackFunc = (entries, observer) => {
       entries.forEach((entry) => {
-        entry.isIntersecting ? tween.play() : tween.reverse();
+        animation.isVisible = entry.isIntersecting;
+        showIfVisible();
       });
     };
 
@@ -46,14 +59,15 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
       callbackFunc,
       options
     );
-
     observerViewPortPosition.observe(barRef.current);
 
     let timer = null;
     const observerResize = new ResizeObserver(() => {
       clearTimeout(timer);
+
       timer = setTimeout(() => {
-        tween = createAnimation();
+        createAnimation();
+        showIfVisible();
       }, 100);
     });
     observerResize.observe(totalBarRef.current);
@@ -64,6 +78,7 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
       clearTimeout(timer);
     };
   }, [progress, textGenerator]);
+
   return (
     <div
       ref={totalBarRef}
