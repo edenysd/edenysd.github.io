@@ -1,7 +1,7 @@
 import { gsap } from "gsap/all";
 import React from "react";
 
-const ProgressBarLayout = ({ progress, textGenerator }) => {
+const ProgressBarComponent = ({ progress, textGenerator }) => {
   const barRef = React.useRef(null);
   const totalBarRef = React.useRef(null);
   const textRef = React.useRef(null);
@@ -14,9 +14,12 @@ const ProgressBarLayout = ({ progress, textGenerator }) => {
         duration: 1,
         width: (totalBarWidth * progress) / 100,
         ease: "slow.out",
-        // onUpdate: () => {
-        //     textRef.current.innerText = textGenerator(Math.round(barRef.current.offsetWidth / totalBarWidth * 10000) / 100)
-        // },
+        onUpdate: () => {
+          textRef.current.innerText = textGenerator(
+            Math.round((barRef.current.offsetWidth / totalBarWidth) * 10000) /
+              100
+          );
+        },
         onComplete: () => {
           textRef.current.innerText = textGenerator(progress);
         },
@@ -81,4 +84,4 @@ const ProgressBarLayout = ({ progress, textGenerator }) => {
   );
 };
 
-export default ProgressBarLayout;
+export default ProgressBarComponent;
