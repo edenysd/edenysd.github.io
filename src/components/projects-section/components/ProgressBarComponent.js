@@ -7,36 +7,32 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
   const textRef = React.useRef(null);
 
   React.useEffect(() => {
-    const runAnimationUp = () => {
-      const { width: totalBarWidth } =
-        totalBarRef.current.getBoundingClientRect();
+    const createAnimation = () =>
       gsap.to(barRef.current, {
         duration: 1,
-        width: (totalBarWidth * progress) / 100,
+        width:
+          (totalBarRef.current.getBoundingClientRect().width * progress) / 100,
         ease: "slow.out",
         onUpdate: () => {
           textRef.current.innerText = textGenerator(
-            Math.round((barRef.current.offsetWidth / totalBarWidth) * 10000) /
-              100
+            Math.round(
+              (barRef.current.offsetWidth /
+                totalBarRef.current.getBoundingClientRect().width) *
+                10000
+            ) / 100
           );
         },
         onComplete: () => {
           textRef.current.innerText = textGenerator(progress);
         },
       });
-    };
 
-    const runAnimationDown = () => {
-      gsap.to(barRef.current, {
-        duration: 1,
-        width: 0,
-        ease: "slow.out",
-      });
-    };
+    let tween = createAnimation();
+    tween.pause();
 
     const callbackFunc = (entries, observer) => {
       entries.forEach((entry) => {
-        entry.isIntersecting ? runAnimationUp() : runAnimationDown();
+        entry.isIntersecting ? tween.play() : tween.reverse();
       });
     };
 
@@ -50,16 +46,22 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
       callbackFunc,
       options
     );
+
     observerViewPortPosition.observe(barRef.current);
 
-    const observerResize = new ResizeObserver(async () => {
-      runAnimationUp();
+    let timer = null;
+    const observerResize = new ResizeObserver(() => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        tween = createAnimation();
+      }, 100);
     });
     observerResize.observe(totalBarRef.current);
 
     return () => {
       observerViewPortPosition.disconnect();
       observerResize.disconnect();
+      clearTimeout(timer);
     };
   }, [progress, textGenerator]);
   return (
