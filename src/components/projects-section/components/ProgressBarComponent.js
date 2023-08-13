@@ -21,7 +21,7 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
       }
 
       animation.trigger = gsap.to(barRef.current, {
-        duration: 1,
+        duration: 0.5,
         width:
           (totalBarRef.current.getBoundingClientRect().width * progress) / 100,
         ease: "slow.out",
