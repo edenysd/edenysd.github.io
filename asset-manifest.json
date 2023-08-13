@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb6bb07f.css",
-    "main.js": "/static/js/main.28af61ef.js",
+    "main.css": "/static/css/main.988d7226.css",
+    "main.js": "/static/js/main.f48ef3f7.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/background-hero.jpg": "/static/media/background-hero.83117f9dbe6b8eea275b.jpg",
     "static/media/preview.jpg": "/static/media/preview.a0b3762cf735745f5361.jpg",
@@ -9,7 +9,7 @@
     "static/media/preview2.png": "/static/media/preview2.7bf5928c9aa93c8e92d1.png",
     "static/media/preview1.png": "/static/media/preview1.6147c48f9ead8a6a766d.png",
     "static/media/profile-photo.jpg": "/static/media/profile-photo.7ec36341b0785a0378d8.jpg",
-    "static/media/my_cv.pdf": "/static/media/my_cv.77053b36668b0cb34829.pdf",
+    "static/media/edenys_resume.pdf": "/static/media/edenys_resume.a4bd222248722e5b8864.pdf",
     "static/media/splash.png": "/static/media/splash.644ed4dff1abcb95f9ff.png",
     "static/media/logo.png": "/static/media/logo.03b46e9ab0a1477985f8.png",
     "static/media/gato_bravo.png": "/static/media/gato_bravo.d85e6b45bbc43f6d70bf.png",
@@ -20,12 +20,12 @@
     "static/media/linkedin.svg": "/static/media/linkedin.6fce41f4632373a805cc9a71c83b989e.svg",
     "static/media/gmail.svg": "/static/media/gmail.26901d5ce62f22013d8fc226d70f127b.svg",
     "static/media/presentation.svg": "/static/media/presentation.8382b8161dd2fcc91f4ad7d4697c70b3.svg",
-    "main.eb6bb07f.css.map": "/static/css/main.eb6bb07f.css.map",
-    "main.28af61ef.js.map": "/static/js/main.28af61ef.js.map",
+    "main.988d7226.css.map": "/static/css/main.988d7226.css.map",
+    "main.f48ef3f7.js.map": "/static/js/main.f48ef3f7.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb6bb07f.css",
-    "static/js/main.28af61ef.js"
+    "static/css/main.988d7226.css",
+    "static/js/main.f48ef3f7.js"
   ]
 }
