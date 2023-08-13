@@ -44,10 +44,10 @@ const HeroSection = () => {
   return (
     <HeroPerspectiveWrapper processMouseMoveEvent={processMouseMoveEvent}>
       <div
-        className="absolute w-full dynamic-h-screen align-middle flex p-0 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between bg-black/30 sm:bg-transparent"
+        className="absolute w-full dynamic-h-screen align-middle flex p-0 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between"
         style={{ transform: "translateZ(50px)" }}
       >
-        <div className="align-middle w-full flex py-16 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between  sm:bg-black/30 lg:bg-transparent ">
+        <div className="align-middle w-full flex py-16 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between">
           <div
             className="flex pb-3 items-end sm:items-center"
             style={{
@@ -59,10 +59,10 @@ const HeroSection = () => {
           <div
             className="flex items-top  sm:items-center"
             style={{
-              transform: " translateZ(11px)",
+              transform: "translateZ(11px)",
             }}
           >
-            <Phrase className="w-full" />
+            {/* <Phrase className="w-full" /> */}
           </div>
         </div>
       </div>
