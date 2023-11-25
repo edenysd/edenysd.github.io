@@ -3,11 +3,11 @@ import React from "react";
 const AnimatedLayer = () => {
   const canvasRef = React.useRef();
   const elementsRef = React.useRef([]);
-  const perspective = React.useRef(0);
+  const mousePerspective = React.useRef(0);
 
   const handleMouseMoveEvent = React.useCallback((event) => {
     const halfWindowW = canvasRef.current.offsetWidth * 0.5;
-    perspective.current = (event.pageX - halfWindowW) / halfWindowW;
+    mousePerspective.current = (event.pageX - halfWindowW) / halfWindowW;
   }, []);
 
   React.useEffect(() => {
@@ -22,19 +22,30 @@ const AnimatedLayer = () => {
   }, [handleMouseMoveEvent]);
   React.useEffect(() => {
     const FRAMES_PER_SECOND = 60;
-
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     let interval = null;
-
+    // canvas layer variables
     let canvasWidth,
       canvasHeight,
       canvasMaxDimension,
       clientHeight,
       numberOfParticles,
       velocity,
-      size,
+      size;
+
+    // required parallax variables
+    let current_render_perspective = 0,
       parallax;
+    const updatePerspective = () => {
+      const diff_perspective =
+        current_render_perspective - mousePerspective.current;
+      current_render_perspective =
+        current_render_perspective -
+        ((diff_perspective * diff_perspective * diff_perspective) /
+          FRAMES_PER_SECOND) *
+          5;
+    };
 
     const updateValues = () => {
       const { width, height } = canvas.getBoundingClientRect();
@@ -45,7 +56,7 @@ const AnimatedLayer = () => {
       numberOfParticles = canvasMaxDimension / 5;
       velocity = canvasMaxDimension / 30;
       size = canvasMaxDimension / 500;
-      parallax = canvasMaxDimension / 20;
+      parallax = canvasMaxDimension / 5;
     };
     updateValues();
 
@@ -148,7 +159,7 @@ const AnimatedLayer = () => {
     };
 
     const applyProjection = (x, distance) => {
-      let newX = x - parallax * distance * perspective.current;
+      let newX = x - parallax * distance * current_render_perspective;
       if (newX < 0) newX += canvasWidth;
       if (newX > canvasWidth) newX -= canvasWidth;
       return newX;
@@ -156,7 +167,7 @@ const AnimatedLayer = () => {
 
     const rainParticle = () => {
       ctx.clearRect(0, 0, canvasMaxDimension, canvasHeight);
-
+      updatePerspective();
       for (let i = 0; i < numberOfParticles; i++) {
         const particle = elementsRef.current[i];
         ctx.beginPath();
