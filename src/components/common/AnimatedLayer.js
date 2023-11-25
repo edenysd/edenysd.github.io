@@ -5,19 +5,19 @@ const AnimatedLayer = () => {
   const elementsRef = React.useRef([]);
 
   React.useEffect(() => {
+    const FRAMES_PER_SECOND = 60;
+
     const canvas = canvasRef.current;
-
     const ctx = canvas.getContext("2d");
-    let timer = null;
+    let interval = null;
 
-    const { width, height } = canvas.getBoundingClientRect();
-    let canvasWidth = (canvas.width = width);
-    let canvasHeight = (canvas.height = height);
-    let canvasMaxDimension = Math.max(canvasWidth, canvasHeight);
-    let clientHeight = document.documentElement.clientHeight;
-    let numberOfParticles = canvasMaxDimension / 10;
-    let velocity = canvasMaxDimension / 400;
-    let size = canvasMaxDimension / 500;
+    let canvasWidth,
+      canvasHeight,
+      canvasMaxDimension,
+      clientHeight,
+      numberOfParticles,
+      velocity,
+      size;
 
     const updateValues = () => {
       const { width, height } = canvas.getBoundingClientRect();
@@ -26,7 +26,7 @@ const AnimatedLayer = () => {
       canvasMaxDimension = Math.max(canvasWidth, canvasHeight);
       clientHeight = document.documentElement.clientHeight;
       numberOfParticles = canvasMaxDimension / 10;
-      velocity = canvasMaxDimension / 400;
+      velocity = canvasMaxDimension / 40;
       size = canvasMaxDimension / 500;
     };
     updateValues();
@@ -45,8 +45,14 @@ const AnimatedLayer = () => {
         elementsRef.current[i] = {
           x: Math.ceil(Math.random() * canvasMaxDimension),
           y: Math.ceil(Math.random() * canvasHeight),
-          toX: (toX / Math.sqrt(toY * toY + toX * toX)) * distance * velocity,
-          toY: (toY / Math.sqrt(toY * toY + toX * toX)) * distance * velocity,
+          toX:
+            (toX / Math.sqrt(toY * toY + toX * toX)) *
+            distance *
+            (velocity / FRAMES_PER_SECOND),
+          toY:
+            (toY / Math.sqrt(toY * toY + toX * toX)) *
+            distance *
+            (velocity / FRAMES_PER_SECOND),
           size: distance * size,
         };
       }
@@ -101,22 +107,22 @@ const AnimatedLayer = () => {
         ctx.beginPath();
         ctx.moveTo(cx, cy);
         ctx.lineTo(cx, cy + long * 5);
-        ctx.stroke();
       }
     };
 
     const updateParticle = (particle) => {
       if (particle.y < clientHeight) {
-        particle.x = particle.x + particle.toX;
-        particle.y = particle.y + particle.toY;
+        particle.x = particle.x + particle.toX * (velocity / FRAMES_PER_SECOND);
+        particle.y = particle.y + particle.toY * (velocity / FRAMES_PER_SECOND);
       } else if (particle.y > canvasHeight - clientHeight) {
-        particle.x = particle.x + particle.toX;
-        particle.y = particle.y + particle.toY;
+        particle.x = particle.x + particle.toX * (velocity / FRAMES_PER_SECOND);
+        particle.y = particle.y + particle.toY * (velocity / FRAMES_PER_SECOND);
       } else {
         particle.y =
           particle.y +
           Math.sqrt(particle.toX * particle.toX + particle.toY * particle.toY) *
-            5;
+            5 *
+            (velocity / FRAMES_PER_SECOND);
       }
       if (particle.x > canvasMaxDimension) particle.x = 0;
       if (particle.x < 0) particle.x = canvasMaxDimension;
@@ -134,18 +140,18 @@ const AnimatedLayer = () => {
         ctx.stroke();
         updateParticle(particle);
       }
-      timer = setTimeout(
-        () => window.requestAnimationFrame(rainParticle),
-        100 / 10
-      );
     };
 
     init();
-    rainParticle();
+
+    interval = setInterval(
+      () => window.requestAnimationFrame(rainParticle),
+      1000 / FRAMES_PER_SECOND
+    );
 
     return () => {
       elementsRef.current = null;
-      clearTimeout(timer);
+      clearInterval(interval);
       observer?.disconnect();
     };
   }, []);
