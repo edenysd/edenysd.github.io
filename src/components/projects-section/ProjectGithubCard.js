@@ -53,10 +53,10 @@ const ProjectGithubCard = ({
   }, [github, media]);
 
   return (
-    <div className={"h-auto w-full sm:w-4/12 flex items-start p-2"}>
+    <div className={"h-full w-full flex items-start p-2"}>
       <a
         className={
-          "w-full h-fit select-none flex flex-col items-center p-2 shadow-sm shadow-black backdrop-blur-sm hover:backdrop-blur-0 hover:shadow-md hover:shadow-black active:bg-semizinc active:shadow-none active:sepia active:backdrop-blur-sm"
+          "w-full h-full select-none flex flex-col items-center p-2 shadow-sm shadow-black backdrop-blur-sm hover:backdrop-blur-0 hover:shadow-md hover:shadow-black active:bg-semizinc active:shadow-none active:sepia active:backdrop-blur-sm"
         }
         href={github.src}
         target={"_blank"}

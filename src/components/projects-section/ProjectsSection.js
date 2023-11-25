@@ -9,7 +9,7 @@ const ProjectsSection = () => {
       id="projects-section"
     >
       <p className="py-8 text-6xl font-serif">Recent Projects</p>
-      <div className="flex relative w-full h-full flex-row flex-wrap">
+      <div className="grid grid-cols-3 w-full h-full">
         {projects.map((project) => (
           <ProjectGithubCard key={project.title} {...project} />
         ))}
