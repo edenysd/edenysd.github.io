@@ -2,7 +2,6 @@ import React from "react";
 
 import HeroPerspectiveWrapper from "./HeroPerspectiveWrapper";
 import { ReactComponent as Presentation } from "../../media/sections/hero-section/presentation.svg";
-import { ReactComponent as Phrase } from "../../media/sections/hero-section/hero-phrase.svg";
 import background from "../../media/sections/hero-section/background-hero.jpg";
 
 const HERO_TEXT_SHADOW_X = 2,
