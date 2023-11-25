@@ -44,7 +44,7 @@ const AnimatedLayer = () => {
         current_render_perspective -
         ((diff_perspective * diff_perspective * diff_perspective) /
           FRAMES_PER_SECOND) *
-          5;
+          10;
     };
 
     const updateValues = () => {
