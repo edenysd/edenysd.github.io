@@ -3,7 +3,23 @@ import React from "react";
 const AnimatedLayer = () => {
   const canvasRef = React.useRef();
   const elementsRef = React.useRef([]);
+  const perspective = React.useRef(0);
 
+  const handleMouseMoveEvent = React.useCallback((event) => {
+    const halfWindowW = canvasRef.current.offsetWidth * 0.5;
+    perspective.current = (event.pageX - halfWindowW) / halfWindowW;
+  }, []);
+
+  React.useEffect(() => {
+    const canvasArea = document.getElementById("canvas-area");
+    const listenner = canvasArea.addEventListener(
+      "mousemove",
+      handleMouseMoveEvent
+    );
+    return () => {
+      canvasArea.removeEventListener("mousemove", listenner);
+    };
+  }, [handleMouseMoveEvent]);
   React.useEffect(() => {
     const FRAMES_PER_SECOND = 60;
 
@@ -17,7 +33,8 @@ const AnimatedLayer = () => {
       clientHeight,
       numberOfParticles,
       velocity,
-      size;
+      size,
+      parallax;
 
     const updateValues = () => {
       const { width, height } = canvas.getBoundingClientRect();
@@ -25,9 +42,10 @@ const AnimatedLayer = () => {
       canvasHeight = canvas.height = height;
       canvasMaxDimension = Math.max(canvasWidth, canvasHeight);
       clientHeight = document.documentElement.clientHeight;
-      numberOfParticles = canvasMaxDimension / 10;
-      velocity = canvasMaxDimension / 40;
+      numberOfParticles = canvasMaxDimension / 5;
+      velocity = canvasMaxDimension / 30;
       size = canvasMaxDimension / 500;
+      parallax = canvasMaxDimension / 20;
     };
     updateValues();
 
@@ -43,7 +61,7 @@ const AnimatedLayer = () => {
         const toX = Math.random() - 0.5;
         const toY = ((Math.random() + 1) * 3) / 3;
         elementsRef.current[i] = {
-          x: Math.ceil(Math.random() * canvasMaxDimension),
+          x: Math.ceil(Math.random() * canvasWidth),
           y: Math.ceil(Math.random() * canvasHeight),
           toX:
             (toX / Math.sqrt(toY * toY + toX * toX)) *
@@ -53,7 +71,7 @@ const AnimatedLayer = () => {
             (toY / Math.sqrt(toY * toY + toX * toX)) *
             distance *
             (velocity / FRAMES_PER_SECOND),
-          size: distance * size,
+          distance: distance,
         };
       }
     };
@@ -124,9 +142,16 @@ const AnimatedLayer = () => {
             5 *
             (velocity / FRAMES_PER_SECOND);
       }
-      if (particle.x > canvasMaxDimension) particle.x = 0;
-      if (particle.x < 0) particle.x = canvasMaxDimension;
+      if (particle.x > canvasWidth) particle.x = 0;
+      if (particle.x < 0) particle.x = canvasWidth;
       if (particle.y > canvasHeight) particle.y = 0;
+    };
+
+    const applyProjection = (x, distance) => {
+      let newX = x - parallax * distance * perspective.current;
+      if (newX < 0) newX += canvasWidth;
+      if (newX > canvasWidth) newX -= canvasWidth;
+      return newX;
     };
 
     const rainParticle = () => {
@@ -135,7 +160,11 @@ const AnimatedLayer = () => {
       for (let i = 0; i < numberOfParticles; i++) {
         const particle = elementsRef.current[i];
         ctx.beginPath();
-        drawParticle(particle.x, particle.y, particle.size);
+        drawParticle(
+          applyProjection(particle.x, particle.distance),
+          particle.y,
+          particle.distance * size
+        );
         ctx.fill();
         ctx.stroke();
         updateParticle(particle);

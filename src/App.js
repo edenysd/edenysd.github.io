@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavBarLayer />
       <HeroSection />
-      <div className="w-full h-auto absolute">
+      <div id="canvas-area" className="w-full h-auto absolute">
         <AnimatedLayer />
         <AboutSection />
         <ProjectsSection />
