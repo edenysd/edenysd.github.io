@@ -162,7 +162,7 @@ const AnimatedLayer = () => {
         particle.y =
           particle.y +
           Math.sqrt(particle.toX * particle.toX + particle.toY * particle.toY) *
-            5 *
+            3 *
             (velocity / FRAMES_PER_SECOND);
       }
       if (particle.x > canvasWidth) particle.x = 0;
