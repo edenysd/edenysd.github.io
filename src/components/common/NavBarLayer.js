@@ -90,18 +90,8 @@ const NavBarLayer = () => {
     >
       <div className={"flex flex-row h-full w-64 py-3 items-center"}>
         <a
-          className="h-full w-auto m-auto pointer-events-auto"
+          className="h-full w-auto m-auto pointer-events-auto drop-shadow-custom-1"
           href="#hero-section"
-          onMouseEnter={(e) => {
-            gsap.to(e.target, {
-              filter: "drop-shadow(5px 5px 2px #a3a)",
-            });
-          }}
-          onMouseLeave={(e) => {
-            gsap.to(e.target, {
-              filter: "drop-shadow(0px 0px 0px #a3a)",
-            });
-          }}
         >
           <Logo
             className="pointer-events-none"
