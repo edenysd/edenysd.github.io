@@ -171,7 +171,8 @@ const AnimatedLayer = () => {
     };
 
     const applyProjection = (x, distance) => {
-      let newX = x - parallax * distance * current_render_perspective;
+      let newX =
+        x - parallax * distance * distance * current_render_perspective;
       if (newX < 0) newX += canvasWidth;
       if (newX > canvasWidth) newX -= canvasWidth;
       return newX;
