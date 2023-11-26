@@ -187,7 +187,12 @@ const AnimatedLayer = () => {
     };
 
     const rainParticle = () => {
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+      ctx.clearRect(
+        0,
+        Math.max(0, -canvasTop),
+        canvasWidth,
+        Math.min(canvasHeight - canvasTop, canvasHeight)
+      );
       updatePerspective();
       updateScroll();
       for (let i = 0; i < numberOfParticles; i++) {
