@@ -59,7 +59,6 @@ const AnimatedLayer = () => {
 
     const updateValues = () => {
       updateScroll();
-      console.log(canvas.getBoundingClientRect());
       const { width, height } = canvas.getBoundingClientRect();
       canvasWidth = canvas.width = width;
       canvasHeight = canvas.height = height;
