@@ -20,6 +20,7 @@ const AnimatedLayer = () => {
       canvasArea.removeEventListener("mousemove", listenner);
     };
   }, [handleMouseMoveEvent]);
+
   React.useEffect(() => {
     const FRAMES_PER_SECOND = 60;
     const canvas = canvasRef.current;
@@ -27,8 +28,11 @@ const AnimatedLayer = () => {
     let interval = null;
     // canvas layer variables
     let canvasWidth,
+      canvasTop,
+      canvasBottom,
       canvasHeight,
-      canvasMaxDimension,
+      canvasTotalArea,
+      maxViewPortSize,
       clientHeight,
       numberOfParticles,
       velocity,
@@ -47,16 +51,25 @@ const AnimatedLayer = () => {
           10;
     };
 
+    const updateScroll = () => {
+      const { top, bottom } = canvas.getBoundingClientRect();
+      canvasBottom = bottom;
+      canvasTop = top;
+    };
+
     const updateValues = () => {
+      updateScroll();
+      console.log(canvas.getBoundingClientRect());
       const { width, height } = canvas.getBoundingClientRect();
       canvasWidth = canvas.width = width;
       canvasHeight = canvas.height = height;
-      canvasMaxDimension = Math.max(canvasWidth, canvasHeight);
+      canvasTotalArea = canvasWidth * canvasHeight;
+      maxViewPortSize = Math.max(canvasWidth, canvasHeight);
       clientHeight = document.documentElement.clientHeight;
-      numberOfParticles = canvasMaxDimension / 5;
-      velocity = canvasMaxDimension / 30;
-      size = canvasMaxDimension / 500;
-      parallax = canvasMaxDimension / 5;
+      numberOfParticles = canvasTotalArea / 9000;
+      velocity = canvasHeight / 20;
+      size = maxViewPortSize / 400;
+      parallax = canvasWidth / 5;
     };
     updateValues();
 
@@ -165,19 +178,30 @@ const AnimatedLayer = () => {
       return newX;
     };
 
+    const isParticleOutOfScreen = (particle) => {
+      return (
+        particle.y + canvasTop < 0 ||
+        particle.y + canvasTop > document.documentElement.clientHeight ||
+        canvasBottom < 0
+      );
+    };
+
     const rainParticle = () => {
-      ctx.clearRect(0, 0, canvasMaxDimension, canvasHeight);
+      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
       updatePerspective();
+      updateScroll();
       for (let i = 0; i < numberOfParticles; i++) {
         const particle = elementsRef.current[i];
-        ctx.beginPath();
-        drawParticle(
-          applyProjection(particle.x, particle.distance),
-          particle.y,
-          particle.distance * size
-        );
-        ctx.fill();
-        ctx.stroke();
+        if (!isParticleOutOfScreen(particle)) {
+          ctx.beginPath();
+          drawParticle(
+            applyProjection(particle.x, particle.distance),
+            particle.y,
+            particle.distance * size
+          );
+          ctx.fill();
+          ctx.stroke();
+        }
         updateParticle(particle);
       }
     };
