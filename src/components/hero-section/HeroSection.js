@@ -1,7 +1,6 @@
 import React from "react";
 
 import HeroPerspectiveWrapper from "./HeroPerspectiveWrapper";
-import { ReactComponent as Presentation } from "../../media/sections/hero-section/presentation.svg";
 import background from "../../media/sections/hero-section/background-hero.jpg";
 
 const HERO_TEXT_SHADOW_X = 2,
@@ -46,14 +45,38 @@ const HeroSection = () => {
         className="absolute w-full dynamic-h-screen align-middle flex p-0 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between"
         style={{ transform: "translateZ(50px)" }}
       >
-        <div className="align-middle w-full flex py-16 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between">
+        <div className="w-full flex py-16 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between">
           <div
             className="flex pb-3 items-end sm:items-center"
             style={{
               transform: "translateZ(20px)",
             }}
           >
-            <Presentation className="w-full" ref={presentationRef} />
+            <div className="w-full" ref={presentationRef}>
+              <div
+                className="flex flex-col lg:text-left"
+                style={{
+                  color: "rgb(247 247 247)",
+                  fontFamily: "Literata",
+                  fontSize: "60px",
+                  fontWeight: "400",
+                  whiteSpace: "pre",
+                }}
+              >
+                <span
+                  style={{
+                    paintOrder: "fill",
+                    fontWeight: "600",
+                    strokeWidth: "0px",
+                  }}
+                >
+                  Hi! I'm
+                </span>
+                <span style={{ fontWeight: "600", color: "rgb(164 237 185)" }}>
+                  Edenis Denis
+                </span>
+              </div>
+            </div>
           </div>
           <div
             className="flex items-top  sm:items-center"
