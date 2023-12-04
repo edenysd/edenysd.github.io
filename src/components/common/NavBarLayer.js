@@ -2,7 +2,6 @@ import React from "react";
 import { gsap } from "gsap/all";
 import { ReactComponent as Logo } from "../../media/logo.svg";
 import NavBarButtonSection from "./NavBarButtonSection";
-import MyCV from "../../media/edenys_resume.pdf";
 
 const SECTIONS = [
   {
@@ -106,7 +105,7 @@ const NavBarLayer = () => {
           className="group nav-link p-3 hover:bg-lime-200 active:bg-gray-800 pointer-events-auto font-semibold px-3"
           target={"_blank"}
           rel={"noreferrer"}
-          href={MyCV}
+          href="/Edenys's Resume.pdf"
         >
           <span className="w-fit text-lime-200 group-hover:text-black">
             GET CV
