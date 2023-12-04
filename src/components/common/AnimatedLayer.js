@@ -67,7 +67,7 @@ const AnimatedLayer = () => {
       maxViewPortSize = Math.max(canvasWidth, clientHeight);
       numberOfParticles = canvasTotalArea / 9000;
       velocity = canvasHeight / 20;
-      size = maxViewPortSize / 200;
+      size = Math.sqrt(canvasTotalArea / 100000);
       parallax = canvasWidth / 5;
     };
     updateValues();
