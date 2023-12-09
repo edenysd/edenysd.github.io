@@ -55,9 +55,8 @@ const ProjectGithubCard = ({
   return (
     <div className={"h-full w-full flex items-start p-2"}>
       <a
-        className={
-          "w-full h-full select-none flex flex-col items-center p-2 shadow-sm shadow-black backdrop-blur-sm hover:backdrop-blur-0 hover:shadow-md hover:shadow-black active:bg-semizinc active:shadow-none active:sepia active:backdrop-blur-sm"
-        }
+        className="w-full h-full select-none flex flex-col items-center p-2 shadow-sm shadow-black backdrop-blur-md 
+          hover:backdrop-blur-0 hover:shadow-md hover:shadow-black"
         href={github.src}
         target={"_blank"}
         rel={"noopener noreferrer"}
