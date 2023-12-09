@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.624ad24b.css",
-    "main.js": "/static/js/main.8a783f4b.js",
+    "main.css": "/static/css/main.203520e9.css",
+    "main.js": "/static/js/main.43d08da8.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
-    "static/media/background-hero.jpg": "/static/media/background-hero.83117f9dbe6b8eea275b.jpg",
-    "static/media/profile-photo.jpg": "/static/media/profile-photo.77f9ff4cbfa4ae40b3c1.jpg",
-    "static/media/preview.jpg": "/static/media/preview.a0b3762cf735745f5361.jpg",
-    "static/media/preview3.png": "/static/media/preview3.0c26cf3b9df810ef407a.png",
-    "static/media/preview2.png": "/static/media/preview2.7bf5928c9aa93c8e92d1.png",
-    "static/media/preview1.png": "/static/media/preview1.6147c48f9ead8a6a766d.png",
+    "static/media/background-hero-reduced.jpg": "/static/media/background-hero-reduced.39c7849c171fd09b3bd5.jpg",
+    "static/media/preview4.png": "/static/media/preview4.0ac28a743e18e6f23f32.png",
+    "static/media/preview3.png": "/static/media/preview3.8c84fc804f82a84fdda2.png",
+    "static/media/preview2.png": "/static/media/preview2.59386f075c9b96654341.png",
+    "static/media/preview1.png": "/static/media/preview1.90922e8878795f74bbdd.png",
+    "static/media/preview.jpg": "/static/media/preview.e4933be3598df7ea161f.jpg",
+    "static/media/profile-photo.jpg": "/static/media/profile-photo.070893cec57814188e22.jpg",
     "static/media/splash.png": "/static/media/splash.644ed4dff1abcb95f9ff.png",
     "static/media/logo.png": "/static/media/logo.03b46e9ab0a1477985f8.png",
     "static/media/gato_bravo.png": "/static/media/gato_bravo.d85e6b45bbc43f6d70bf.png",
@@ -17,12 +18,12 @@
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.6fce41f4632373a805cc9a71c83b989e.svg",
     "static/media/gmail.svg": "/static/media/gmail.26901d5ce62f22013d8fc226d70f127b.svg",
-    "main.624ad24b.css.map": "/static/css/main.624ad24b.css.map",
-    "main.8a783f4b.js.map": "/static/js/main.8a783f4b.js.map",
+    "main.203520e9.css.map": "/static/css/main.203520e9.css.map",
+    "main.43d08da8.js.map": "/static/js/main.43d08da8.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.624ad24b.css",
-    "static/js/main.8a783f4b.js"
+    "static/css/main.203520e9.css",
+    "static/js/main.43d08da8.js"
   ]
 }
