@@ -12,7 +12,7 @@ const ContactmeCard = ({ title, description, github, media, className }) => {
     >
       <div
         className={
-          "w-auto h-auto select-none flex flex-row p-2 shadow-lg shadow-slate-600 backdrop-blur-none hover:backdrop-blur-sm"
+          "w-auto h-auto select-none flex flex-row p-2 hover:backdrop-blur-sm"
         }
       >
         <a
