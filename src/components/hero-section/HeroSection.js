@@ -1,7 +1,7 @@
 import React from "react";
 
 import HeroPerspectiveWrapper from "./HeroPerspectiveWrapper";
-import background from "../../media/sections/hero-section/background-hero.jpg";
+import background from "../../media/sections/hero-section/background-hero-reduced.jpg";
 
 const HERO_TEXT_SHADOW_X = 2,
   HERO_TEXT_SHADOW_Y = 2;
