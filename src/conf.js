@@ -1,8 +1,21 @@
-import portfolioMedia from "./media/preview/portfolio";
-import gatoRatonMedia from "./media/preview/gato_raton";
-import histlogMedia from "./media/preview/histlog";
+import liasShopMedia from "./media/preview/lias_shop";
 import slackCloneMedia from "./media/preview/my_slack_clone";
+import portfolioMedia from "./media/preview/portfolio";
+import histlogMedia from "./media/preview/histlog";
+import gatoRatonMedia from "./media/preview/gato_raton";
+
 export const projects = [
+  {
+    title: "Lia's Shop",
+    description: `Ready to production store webpage.
+    Integrated with a fake store API.`,
+    media: liasShopMedia,
+    github: {
+      src: "https://github.com/edenysd/lia-s-shop",
+      owner: "edenysd",
+      repo: "lia-s-shop",
+    },
+  },
   {
     title: "My Slack Clone",
     description: `<strong>Slack Clone SPA</strong>.
