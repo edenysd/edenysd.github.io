@@ -1,5 +1,6 @@
 import portfolioMedia from "./media/preview/portfolio";
 import gatoRatonMedia from "./media/preview/gato_raton";
+import histlogMedia from "./media/preview/histlog";
 import slackCloneMedia from "./media/preview/my_slack_clone";
 export const projects = [
   {
@@ -30,9 +31,23 @@ export const projects = [
     },
   },
   {
+    title: "Histlog",
+    description: `Web chat game using ISO Prolog as logic engine.
+
+    Pedagogical tool to familiarize the <b>student</b> with the ISO prolog syntax 
+    `,
+    media: histlogMedia,
+    github: {
+      src: "https://github.com/edenysd/histlog",
+      owner: "edenysd",
+      repo: "histlog",
+    },
+  },
+  {
     title: "El Gato y el Raton",
-    description:
-      "A beautiful game with some interesting things. The entire game is rendered on a single canvas using good programming practices to control game state and transitions. The only utilities used are the android canvas and the system event provider.",
+    description: `A beautiful game with some interesting things.
+    The entire game is rendered on a single canvas using good programming practices to control game state and transitions.
+    The only utilities used are the android canvas and the system event provider.`,
     media: gatoRatonMedia,
     github: {
       src: "https://github.com/edenysd/El-Gato-y-el-Raton",
