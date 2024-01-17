@@ -30,7 +30,6 @@ export class ParallaxProjection {
       x - this.parallaxAmount * distance * distance * this.renderPerspective;
     if (newX < 0) newX += canvasWidth;
     if (newX > canvasWidth) newX -= canvasWidth;
-    console.log(x, newX);
     return newX;
   }
 
