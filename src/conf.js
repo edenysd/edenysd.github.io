@@ -3,6 +3,7 @@ import slackCloneMedia from "./media/preview/my_slack_clone";
 import portfolioMedia from "./media/preview/portfolio";
 import histlogMedia from "./media/preview/histlog";
 import gatoRatonMedia from "./media/preview/gato_raton";
+import rendoMedia from "./media/preview/rendo";
 
 export const projects = [
   {
@@ -28,6 +29,16 @@ export const projects = [
       src: "https://github.com/edenysd/my-slack-clone",
       owner: "edenysd",
       repo: "my-slack-clone",
+    },
+  },
+  {
+    title: "Rendo",
+    description: `Demo visualization tool for detailed exploration of structured models.`,
+    media: rendoMedia,
+    github: {
+      src: "https://github.com/edenysd/rendo",
+      owner: "edenysd",
+      repo: "rendo",
     },
   },
   {
