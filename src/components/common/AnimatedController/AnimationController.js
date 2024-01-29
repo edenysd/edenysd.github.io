@@ -110,7 +110,7 @@ export class AnimationController {
     this.clientWidth = document.documentElement.clientWidth;
     this.clientTotalArea = this.clientHeight * this.clientWidth;
     this.numberOfParticles = this.clientTotalArea / 4800;
-    this.velocity = document.documentElement.clientHeight / 4;
+    this.velocity = this.clientHeight / 4;
     this.size = Math.sqrt(this.canvasTotalArea / 100000);
     this.parallaxProjection.parallaxAmount = this.canvasWidth / 5;
   }
