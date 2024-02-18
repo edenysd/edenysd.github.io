@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import ProjectGithubCardContent from "./ProjectGithubCardContent";
 import ProjectGithubCardPreview from "./ProjectGithubCardPreview";
 
@@ -9,19 +10,19 @@ const ProjectGithubCard = ({
   media,
   className,
 }) => {
-  const [{ languages, topics }, setState] = React.useState({
+  const [{ languages, topics }, setState] = useState({
     languages: null,
     topics: null,
   });
 
-  React.useEffect(() => {
-    fetch(
-      `https://api.github.com/repos/${github.owner}/${github.repo}/languages`
-    )
-      .then((data) => {
-        return data.json();
-      })
-      .then((newLanguages) => {
+  const [errorOnFetch, setErrorOnFetch] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.github.com/repos/${github.owner}/${github.repo}/languages`
+      )
+      .then(({ data: newLanguages }) => {
         let languagesTotalSum = 0;
 
         for (const language in newLanguages) {
@@ -38,17 +39,21 @@ const ProjectGithubCard = ({
           ...oldState,
           languages: newLanguages,
         }));
+      })
+      .catch((e) => {
+        setErrorOnFetch(true);
       });
 
-    fetch(`https://api.github.com/repos/${github.owner}/${github.repo}/topics`)
-      .then((data) => {
-        return data.json();
-      })
-      .then((newTopics) => {
+    axios
+      .get(`https://api.github.com/repos/${github.owner}/${github.repo}/topics`)
+      .then(({ data: newTopics }) => {
         setState((oldState) => ({
           ...oldState,
           topics: newTopics,
         }));
+      })
+      .catch((e) => {
+        setErrorOnFetch(true);
       });
   }, [github, media]);
 
@@ -67,6 +72,7 @@ const ProjectGithubCard = ({
           description={description}
           topics={topics}
           languages={languages}
+          errorOnFetch={errorOnFetch}
         />
       </a>
     </div>

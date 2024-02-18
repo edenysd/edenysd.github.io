@@ -6,6 +6,7 @@ const ProjectGithubCardContent = ({
   description,
   languages,
   topics,
+  errorOnFetch,
 }) => {
   return (
     <div className={"flex flex-col h-full w-auto"}>
@@ -14,10 +15,12 @@ const ProjectGithubCardContent = ({
         className="text-xl py-2 font-sans bg-semizinc font-light whitespace-pre-line"
         dangerouslySetInnerHTML={{ __html: description }}
       ></p>
-      <div className={"flex flex-col justify-end h-full w-full"}>
-        {languages ? <LanguagesCardComponent languages={languages} /> : null}
-        {topics ? <TopicsCardComponent topics={topics} /> : null}
-      </div>
+      {errorOnFetch ? (
+        <div className={"flex flex-col justify-end h-full w-full"}>
+          {languages ? <LanguagesCardComponent languages={languages} /> : null}
+          {topics ? <TopicsCardComponent topics={topics} /> : null}
+        </div>
+      ) : null}
     </div>
   );
 };
