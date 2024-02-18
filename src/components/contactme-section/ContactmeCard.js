@@ -16,7 +16,7 @@ const ContactmeCard = ({ title, description, github, media, className }) => {
         }
       >
         <a
-          className={"p-3 drop-shadow-custom-1 hover:fill-white"}
+          className={"p-3 glow-on-hover hover:fill-white"}
           href={
             "https://www.linkedin.com/in/edenys-deniz-gonz%C3%A1lez-1a4532210/"
           }
@@ -26,7 +26,7 @@ const ContactmeCard = ({ title, description, github, media, className }) => {
           <LinkedinLogo className="h-16 w-16 sm:h-32 sm:w-32 pointer-events-none" />
         </a>
         <a
-          className={"p-3 drop-shadow-custom-1 hover:fill-white"}
+          className={"p-3 glow-on-hover hover:fill-white"}
           href={"https://github.com/edenysd"}
           target={"_blank"}
           rel={"noreferrer"}
@@ -34,7 +34,7 @@ const ContactmeCard = ({ title, description, github, media, className }) => {
           <GithubLogo className="h-16 w-16 sm:h-32 sm:w-32 pointer-events-none" />
         </a>
         <a
-          className={"p-3 drop-shadow-custom-1 hover:fill-white"}
+          className={"p-3 glow-on-hover hover:fill-white"}
           href={"mailto:holofist1@gmail.com"}
           target={"_top"}
           rel={"noreferrer"}

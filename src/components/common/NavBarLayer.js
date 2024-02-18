@@ -89,7 +89,7 @@ const NavBarLayer = () => {
     >
       <div className={"flex flex-row h-full w-64 py-3 items-center"}>
         <a
-          className="h-full w-auto m-auto pointer-events-auto drop-shadow-custom-1"
+          className="h-full w-auto m-auto pointer-events-auto glow-on-hover"
           href="#hero-section"
         >
           <Logo

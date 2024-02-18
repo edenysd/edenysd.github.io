@@ -21,11 +21,11 @@ export default function AboutCard() {
               </span>
             </p>
             <p>
-              <span className="text-lime-200 glow">5 years</span> of experience
-              working in frontend positions
+              <span className="text-lime-200 glow-5">5 years</span> of
+              experience working in frontend positions
             </p>
             <p>
-              <span className="text-lime-200 glow"> 8 years</span> career in
+              <span className="text-lime-200 glow-5"> 8 years</span> career in
               competitive programming.
             </p>
           </div>
