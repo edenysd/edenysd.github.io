@@ -10,9 +10,7 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
     const animation = { trigger: null, isVisible: false };
 
     const showIfVisible = () => {
-      animation.isVisible
-        ? animation.trigger.play()
-        : animation.trigger.reverse();
+      animation.isVisible && animation.trigger.play();
     };
 
     const createAnimation = () => {
@@ -25,15 +23,6 @@ const ProgressBarComponent = ({ progress, textGenerator }) => {
         width:
           (totalBarRef.current.getBoundingClientRect().width * progress) / 100,
         ease: "slow.out",
-        onUpdate: () => {
-          textRef.current.innerText = textGenerator(
-            Math.round(
-              (barRef.current.offsetWidth /
-                totalBarRef.current.getBoundingClientRect().width) *
-                10000
-            ) / 100
-          );
-        },
         onComplete: () => {
           textRef.current.innerText = textGenerator(progress);
         },
