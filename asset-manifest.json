@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.203520e9.css",
-    "main.js": "/static/js/main.0c86532d.js",
+    "main.css": "/static/css/main.a9be3091.css",
+    "main.js": "/static/js/main.3df36c41.js",
     "static/js/787.f35f70c9.chunk.js": "/static/js/787.f35f70c9.chunk.js",
-    "static/media/background-hero-reduced.jpg": "/static/media/background-hero-reduced.39c7849c171fd09b3bd5.jpg",
     "static/media/preview1.png": "/static/media/preview1.90922e8878795f74bbdd.png",
     "static/media/preview4.png": "/static/media/preview4.7d7e750c7b4a83c714b1.png",
     "static/media/preview5.png": "/static/media/preview5.076eb0fb971fdb68f40e.png",
@@ -15,17 +14,17 @@
     "static/media/logo.png": "/static/media/logo.03b46e9ab0a1477985f8.png",
     "static/media/preview6.png": "/static/media/preview6.f576e3c961b0a83f7900.png",
     "static/media/gato_bravo.png": "/static/media/gato_bravo.d85e6b45bbc43f6d70bf.png",
-    "static/media/logo.svg": "/static/media/logo.cd6c3e959f0cdd2114cda3440df544ea.svg",
+    "static/media/logo.svg": "/static/media/logo.a8214ef9dce3105e7f837282c47fa042.svg",
     "static/media/github.svg": "/static/media/github.2326984afe49a3773aa8b161351caa88.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.6fce41f4632373a805cc9a71c83b989e.svg",
     "static/media/gmail.svg": "/static/media/gmail.26901d5ce62f22013d8fc226d70f127b.svg",
-    "main.203520e9.css.map": "/static/css/main.203520e9.css.map",
-    "main.0c86532d.js.map": "/static/js/main.0c86532d.js.map",
+    "main.a9be3091.css.map": "/static/css/main.a9be3091.css.map",
+    "main.3df36c41.js.map": "/static/js/main.3df36c41.js.map",
     "787.f35f70c9.chunk.js.map": "/static/js/787.f35f70c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.203520e9.css",
-    "static/js/main.0c86532d.js"
+    "static/css/main.a9be3091.css",
+    "static/js/main.3df36c41.js"
   ]
 }
