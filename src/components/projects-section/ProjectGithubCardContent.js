@@ -1,4 +1,30 @@
+import { useMemo } from "react";
 import TopicsCardComponent from "./components/TopicsCardComponent";
+
+const TextDescriptionComponent = ({ description }) => {
+  const cleanedLines = useMemo(() => {
+    return description.split("\n").map((line) => {
+      return line.trim();
+    });
+  }, [description]);
+
+  return (
+    <>
+      {cleanedLines.map((line, index) =>
+        line != "" ? (
+          <p
+            key={index}
+            className="text-xl font-normal font-sans whitespace-pre-line leading-relaxed"
+            style={{ wordSpacing: 2 }}
+            dangerouslySetInnerHTML={{ __html: line }}
+          />
+        ) : (
+          <span key={index} className="mt-2"></span>
+        )
+      )}
+    </>
+  );
+};
 
 const ProjectGithubCardContent = ({
   title,
@@ -7,12 +33,9 @@ const ProjectGithubCardContent = ({
   errorOnFetch,
 }) => {
   return (
-    <div className={"flex flex-col h-full w-auto"}>
-      <p className="text-3xl pt-1 font-sans font-medium mt-8">{title}</p>
-      <p
-        className="text-xl py-2 font-sans  font-light whitespace-pre-line"
-        dangerouslySetInnerHTML={{ __html: description }}
-      ></p>
+    <div className={"flex flex-col h-full w-full text-left p-4"}>
+      <p className="text-3xl pt-1 font-medium mt-4 mb-2">{title}</p>
+      <TextDescriptionComponent description={description} />
       {!errorOnFetch ? (
         <div className={"flex flex-col justify-end h-full w-full mt-8"}>
           {topics ? <TopicsCardComponent topics={topics} /> : null}

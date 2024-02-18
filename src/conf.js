@@ -70,7 +70,9 @@ export const projects = [
   {
     title: "El Gato y el Raton",
     description: `A beautiful game with some interesting things.
+
     The entire game is rendered on a single canvas using good programming practices to control game state and transitions.
+    
     The only utilities used are the android canvas and the system event provider.`,
     media: gatoRatonMedia,
     github: {
