@@ -61,8 +61,8 @@ export class AnimationController {
   velocity = 0;
   size = 0;
 
-  constructor() {
-    this.canvas = document.getElementById("canvas-area");
+  constructor({ canvasId = "canvas-area" }) {
+    this.canvas = document.getElementById(canvasId);
     this.canvasCtx = this.canvas.getContext("2d");
 
     this.parallaxProjection = new ParallaxProjection(
@@ -109,9 +109,9 @@ export class AnimationController {
     this.clientHeight = document.documentElement.clientHeight;
     this.clientWidth = document.documentElement.clientWidth;
     this.clientTotalArea = this.clientHeight * this.clientWidth;
-    this.numberOfParticles = this.clientTotalArea / 4800;
-    this.velocity = this.clientHeight / 4;
-    this.size = Math.sqrt(this.canvasTotalArea / 100000);
+    this.numberOfParticles = this.clientTotalArea / 10800;
+    this.velocity = this.clientHeight / 6;
+    this.size = Math.sqrt(this.canvasTotalArea / 300000);
     this.parallaxProjection.parallaxAmount = this.canvasWidth / 5;
   }
 

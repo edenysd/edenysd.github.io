@@ -3,7 +3,9 @@ import { AnimationController } from "./AnimatedController/AnimationController";
 
 const AnimatedLayer = () => {
   React.useEffect(() => {
-    const animationController = new AnimationController();
+    const animationController = new AnimationController({
+      canvasId: "canvas-area",
+    });
     return () => {
       animationController.removeListeners();
     };

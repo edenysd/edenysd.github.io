@@ -8,6 +8,8 @@ export class ParallaxProjection {
   perspectiveTracker = null;
   renderPerspective = 0;
   parallaxAmount = 0;
+  maxParallaxPerSecond = 30;
+  framesPerSecond = 60;
 
   constructor(canvas, parallaxAmount, framesPerSecond) {
     this.perspectiveTracker = new PerspectiveTracker(canvas);
@@ -16,8 +18,15 @@ export class ParallaxProjection {
   }
 
   updatePerspective() {
-    const diff_perspective =
+    let diff_perspective =
       this.renderPerspective - this.perspectiveTracker.mousePerspective;
+    diff_perspective =
+      Math.sign(diff_perspective) *
+      Math.min(
+        Math.abs(diff_perspective),
+        this.maxParallaxPerSecond / this.framesPerSecond
+      );
+
     this.renderPerspective =
       this.renderPerspective -
       ((diff_perspective * diff_perspective * diff_perspective) /
