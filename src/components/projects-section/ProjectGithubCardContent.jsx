@@ -34,7 +34,7 @@ const ProjectGithubCardContent = ({
 }) => {
   return (
     <div className={"flex flex-col h-full w-full text-left p-4"}>
-      <p className="text-3xl pt-1 font-medium mt-4 mb-2">{title}</p>
+      <p className="text-3xl font-medium mb-2">{title}</p>
       <TextDescriptionComponent description={description} />
       {!errorOnFetch ? (
         <div className={"flex flex-col justify-end h-full w-full mt-8"}>
