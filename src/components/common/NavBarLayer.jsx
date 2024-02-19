@@ -92,7 +92,7 @@ const NavBarLayer = () => {
           />
         </a>
         <a
-          className="group nav-link p-3 hover:bg-lime-200 active:bg-gray-800 pointer-events-auto font-semibold px-3"
+          className="group nav-link p-3 hover:bg-lime-200 hover:rounded-md active:bg-gray-800 pointer-events-auto font-semibold px-3"
           target={"_blank"}
           rel={"noreferrer"}
           href="/Edenys's Resume.pdf"
