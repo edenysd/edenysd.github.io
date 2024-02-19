@@ -59,7 +59,7 @@ const NavBarLayer = () => {
           background: "transparent",
         });
         navRef.current.classList.remove("backdrop-blur-sm");
-        navRef.current.classList.remove("bg-transparentBlack");
+        navRef.current.classList.remove("bg-black/30");
         navRef.current.classList.add("backdrop-blur-none");
         navRef.current.classList.add("bg-transparent");
       } else {
@@ -69,7 +69,7 @@ const NavBarLayer = () => {
         navRef.current.classList.remove("backdrop-blur-none");
         navRef.current.classList.remove("bg-transparent");
         navRef.current.classList.add("backdrop-blur-sm");
-        navRef.current.classList.add("bg-transparentBlack");
+        navRef.current.classList.add("bg-black/30");
       }
     };
 
@@ -85,7 +85,7 @@ const NavBarLayer = () => {
   return (
     <nav
       ref={navRef}
-      className="flex flex-row items-center text-sm sm:text-base backdrop-blur-sm bg-transparentBlack w-full h-16 fixed z-10 pointer-events-none"
+      className="flex flex-row items-center text-sm sm:text-base backdrop-blur-sm bg-black/30 w-full h-16 fixed z-10 pointer-events-none"
     >
       <div className={"flex flex-row h-full w-64 py-3 items-center"}>
         <a
