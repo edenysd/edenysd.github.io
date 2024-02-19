@@ -86,11 +86,12 @@ html {
 
 .glow-on-hover {
   filter: drop-shadow(0px 0px 0px #a3a);
-  transition: filter 100ms;
+  transition: filter 700ms, transform 100ms;
 }
 
 .glow-on-hover:hover {
   filter: drop-shadow(0px 0px 5px #fff);
+  transform: scale(1.11);
 }
 
 .glow-5 {
