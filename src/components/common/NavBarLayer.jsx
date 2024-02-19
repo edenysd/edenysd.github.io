@@ -22,8 +22,6 @@ const NavBarLayer = () => {
   const navRef = React.useRef(null);
 
   React.useEffect(() => {
-    let timer = null;
-
     const hideNavigation = () => {
       if (window.scrollY !== 0)
         gsap.to(navRef.current, {
@@ -40,17 +38,12 @@ const NavBarLayer = () => {
     let lastYscroll = 0;
     let lastDiff = 0;
     const scrollHandler = (e) => {
-      if (timer) {
-        clearTimeout(timer);
-      }
-
       let diff = window.scrollY - lastYscroll;
       if (diff > 0 && diff * lastDiff > 0) {
         hideNavigation();
       }
       if (diff < 0 && diff * lastDiff > 0) {
         showNavigation();
-        timer = setTimeout(hideNavigation, 5000);
       }
       lastDiff = diff;
       lastYscroll = window.scrollY;
@@ -77,9 +70,6 @@ const NavBarLayer = () => {
 
     return () => {
       window.removeEventListener("scroll", scrollHandler);
-      if (timer) {
-        clearTimeout(timer);
-      }
     };
   }, []);
   return (
