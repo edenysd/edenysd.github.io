@@ -11,7 +11,7 @@ const TextDescriptionComponent = ({ description }) => {
   return (
     <>
       {cleanedLines.map((line, index) =>
-        line != "" ? (
+        line !== "" ? (
           <p
             key={index}
             className="text-xl font-normal font-sans whitespace-pre-line leading-relaxed"
