@@ -1,6 +1,6 @@
 import React from "react";
 import { gsap } from "gsap/all";
-import { ReactComponent as Logo } from "../../media/logo.svg";
+import Logo from "../../media/logo.svg?react";
 import NavBarButtonSection from "./NavBarButtonSection";
 
 const SECTIONS = [

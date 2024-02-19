@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://edenysd.github.io/",
+  "type": "module",
   "dependencies": {
     "axios": "^1.6.7",
     "gsap": "^3.10.4",
@@ -11,10 +11,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "test": "vite test",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -38,17 +38,18 @@
     ]
   },
   "devDependencies": {
-    "vite": "^5.1.1",
-    "@vitejs/plugin-react": "^4.2.1",
-    "tailwindcss": "^3.0.24",    
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.31",
-    "gh-pages": "^4.0.0",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.7",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5"
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^4.0.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.0.24",
+    "vite": "^5.1.1",
+    "vite-plugin-svgr": "^4.2.0"
   }
 }

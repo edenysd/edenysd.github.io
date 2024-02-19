@@ -1,7 +1,7 @@
 import React from "react";
-import { ReactComponent as LinkedinLogo } from "../../media/sections/contactme-section/linkedin.svg";
-import { ReactComponent as GithubLogo } from "../../media/sections/contactme-section/github.svg";
-import { ReactComponent as GmailLogo } from "../../media/sections/contactme-section/gmail.svg";
+import LinkedinLogo from "../../media/sections/contactme-section/linkedin.svg?react";
+import GithubLogo from "../../media/sections/contactme-section/github.svg?react";
+import GmailLogo from "../../media/sections/contactme-section/gmail.svg?react";
 
 const ContactmeCard = ({ title, description, github, media, className }) => {
   return (
