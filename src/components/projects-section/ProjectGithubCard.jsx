@@ -3,13 +3,7 @@ import { useEffect, useState } from "react";
 import ProjectGithubCardContent from "./ProjectGithubCardContent";
 import ProjectGithubCardPreview from "./ProjectGithubCardPreview";
 
-const ProjectGithubCard = ({
-  title,
-  description,
-  github,
-  media,
-  className,
-}) => {
+const ProjectGithubCard = ({ title, description, github, media }) => {
   const [{ topics }, setState] = useState({
     languages: null,
     topics: null,
@@ -26,10 +20,10 @@ const ProjectGithubCard = ({
           topics: newTopics,
         }));
       })
-      .catch((e) => {
+      .catch(() => {
         setErrorOnFetch(true);
       });
-  }, [github, media]);
+  }, [github]);
 
   return (
     <div className={"h-full w-full flex items-start p-2"}>
