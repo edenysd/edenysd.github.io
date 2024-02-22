@@ -14,7 +14,7 @@ const HeroSection = () => {
           }}
         >
           <div className="w-full">
-            <div
+            <h1
               className="flex flex-col lg:text-left select-none"
               style={{
                 color: "rgb(247 247 247)",
@@ -39,7 +39,7 @@ const HeroSection = () => {
               >
                 Edenis Denis
               </span>
-            </div>
+            </h1>
           </div>
         </div>
         <div
