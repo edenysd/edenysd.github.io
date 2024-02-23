@@ -1,11 +1,11 @@
 import gsap from "gsap/all";
 import { random } from "gsap/gsap-core";
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ProjectGithubCardPreview = ({ media }) => {
-  const [currentIndex, setIndex] = React.useState(0);
-  const imgRef = React.useRef(null);
-  React.useEffect(() => {
+  const [currentIndex, setIndex] = useState(0);
+  const imgRef = useRef(null);
+  useEffect(() => {
     const timeline = gsap.timeline({
       repeat: "1000000",
       repeatDelay: random(10, 20),
@@ -38,7 +38,7 @@ const ProjectGithubCardPreview = ({ media }) => {
         style={{ objectFit: "cover", position: "absolute" }}
         className={"h-full  w-full"}
         ref={imgRef}
-        src={media ? media[currentIndex] : ""}
+        src={media ? media[currentIndex].src : ""}
         alt={"examples"}
       />
     </div>

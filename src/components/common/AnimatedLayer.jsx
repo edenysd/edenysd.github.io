@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+
+import { useEffect } from "react";
 import { AnimationController } from "./AnimatedController/AnimationController";
 
 const AnimatedLayer = () => {
-  React.useEffect(() => {
+  useEffect(() => {
     const animationController = new AnimationController({
       canvasId: "canvas-area",
     });

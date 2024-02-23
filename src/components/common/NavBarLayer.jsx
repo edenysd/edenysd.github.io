@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap/all";
-import Logo from "../../media/logo.svg?react";
+import Logo from "../../media/logo.svg";
 import NavBarButtonSection from "./NavBarButtonSection";
 
 const SECTIONS = [
@@ -19,9 +21,9 @@ const SECTIONS = [
 ];
 
 const NavBarLayer = () => {
-  const navRef = React.useRef(null);
+  const navRef = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const hideNavigation = () => {
       if (window.scrollY !== 0)
         gsap.to(navRef.current, {

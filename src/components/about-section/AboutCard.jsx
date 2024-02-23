@@ -9,7 +9,7 @@ export default function AboutCard() {
       >
         <img
           className="block mx-auto h-44 rounded-full md:mx-0 md:shrink-0"
-          src={profilePhoto}
+          src={profilePhoto.src}
           alt="Profile face"
         />
         <div className="text-left text-xl pointer-events-auto">

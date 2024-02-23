@@ -1,6 +1,4 @@
-import React from "react";
-
-const TopicItemCardComponent = ({ topic }) => {
+export default function TopicItemCardComponent({ topic }) {
   return (
     <div
       className={
@@ -10,6 +8,4 @@ const TopicItemCardComponent = ({ topic }) => {
       <p>{topic}</p>
     </div>
   );
-};
-
-export default TopicItemCardComponent;
+}

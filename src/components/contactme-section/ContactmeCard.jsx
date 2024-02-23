@@ -1,7 +1,6 @@
-import React from "react";
-import LinkedinLogo from "../../media/sections/contactme-section/linkedin.svg?react";
-import GithubLogo from "../../media/sections/contactme-section/github.svg?react";
-import GmailLogo from "../../media/sections/contactme-section/gmail.svg?react";
+import LinkedinLogo from "../../media/sections/contactme-section/linkedin.svg";
+import GithubLogo from "../../media/sections/contactme-section/github.svg";
+import GmailLogo from "../../media/sections/contactme-section/gmail.svg";
 
 const ContactmeCard = ({ title, description, github, media, className }) => {
   return (
