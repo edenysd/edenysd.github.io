@@ -28,11 +28,10 @@ const ProjectGithubCard = ({ title, description, github, media }) => {
   }, [github]);
 
   return (
-    <div className="h-full w-full flex items-start p-2">
+    <div className="h-full w-full flex items-start p-2 hover:-translate-y-2 transition-transform">
       <a
         className="w-full h-full select-none overflow-auto flex flex-col items-center shadow-sm shadow-black backdrop-blur-md 
           hover:backdrop-blur-0 hover:shadow-md hover:shadow-black
-          hover:scale-[1.01] transition-transform
           rounded-lg"
         href={github.src}
         target={"_blank"}
