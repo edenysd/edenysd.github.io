@@ -29,7 +29,7 @@ const HeroSection = () => {
                   strokeWidth: "0px",
                 }}
               >
-                Hi! I'm
+                {"Hi! I'm"}
               </span>
               <span
                 className="-rotate-12 sm:translate-x-9 glow-3"

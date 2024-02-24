@@ -8,6 +8,7 @@
     "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sharp": "^0.33.2",
     "web-vitals": "^3.5.2"
   },
   "scripts": {
@@ -15,7 +16,8 @@
     "build": "next build",
     "start": "next start",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages --nojekyll -d dist",
+    "deploy:help": "gh-pages --help",
     "test": "vite test",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -27,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.1.0",
     "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",

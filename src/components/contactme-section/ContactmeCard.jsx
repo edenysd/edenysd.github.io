@@ -2,7 +2,7 @@ import LinkedinLogo from "../../media/sections/contactme-section/linkedin.svg";
 import GithubLogo from "../../media/sections/contactme-section/github.svg";
 import GmailLogo from "../../media/sections/contactme-section/gmail.svg";
 
-const ContactmeCard = ({ title, description, github, media, className }) => {
+const ContactmeCard = () => {
   return (
     <div
       className={

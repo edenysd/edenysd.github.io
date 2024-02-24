@@ -39,7 +39,7 @@ const NavBarLayer = () => {
 
     let lastYscroll = 0;
     let lastDiff = 0;
-    const scrollHandler = (e) => {
+    const scrollHandler = () => {
       let diff = window.scrollY - lastYscroll;
       if (diff > 0 && diff * lastDiff > 0) {
         hideNavigation();

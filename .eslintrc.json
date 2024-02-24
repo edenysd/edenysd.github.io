@@ -6,7 +6,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -19,6 +20,7 @@
   "plugins": ["react", "react-refresh", "react-hooks"],
   "rules": {
     "react/jsx-no-target-blank": "off",
+    "react/prop-types": ["warn"],
     "react-refresh/only-export-components": [
       "warn",
       { "allowConstantExport": true }
