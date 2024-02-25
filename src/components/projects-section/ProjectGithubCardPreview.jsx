@@ -33,15 +33,13 @@ const ProjectGithubCardPreview = ({ media }) => {
     };
   }, [media.length]);
   return (
-    <div style={{ width: "100%", paddingBottom: "100%", position: "relative" }}>
-      <img
-        style={{ objectFit: "cover", position: "absolute" }}
-        className={"h-full  w-full"}
-        ref={imgRef}
-        src={media ? media[currentIndex].src : ""}
-        alt={"examples"}
-      />
-    </div>
+    <img
+      style={{ objectFit: "cover" }}
+      className={"h-full  w-full aspect-square"}
+      ref={imgRef}
+      src={media ? media[currentIndex].src : ""}
+      alt={"examples"}
+    />
   );
 };
 
