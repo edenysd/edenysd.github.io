@@ -8,7 +8,7 @@ export default function AboutCard() {
         md:flex-row md:items-center md:space-y-0 md:space-x-6 backdrop-blur-sm"
       >
         <img
-          className="block mx-auto h-44 rounded-full md:mx-0 md:shrink-0"
+          className="block mx-auto h-44 w-44 aspect-square rounded-full md:mx-0 md:shrink-0"
           src={profilePhoto.src}
           alt="Profile face"
         />
