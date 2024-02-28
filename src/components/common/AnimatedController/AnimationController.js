@@ -9,12 +9,14 @@ export class RenderIdArea {
     this.elementRef = document.getElementById(elementId);
     this.drawParticle = drawParticle;
     this.updateParticle = updateParticle;
+    this.updateAreaBounds();
   }
-
+  updateAreaBounds() {
+    this.bounds = this.elementRef.getBoundingClientRect();
+  }
   // canvas relative position
-  isParticleContained(canvas, px, py) {
-    const elementBounds = this.elementRef.getBoundingClientRect();
-    const canvasBounds = canvas.getBoundingClientRect();
+  isParticleContained(canvasBounds, px, py) {
+    const elementBounds = this.bounds;
 
     const relative_px = canvasBounds.x + px;
     const relative_py = canvasBounds.y + py;
@@ -31,6 +33,7 @@ export class RenderIdArea {
 export class AnimationController {
   canvas = null;
   canvasCtx = null;
+  canvasBounds = null;
 
   parallaxProjection = null;
   reziseObserver = null;
@@ -40,8 +43,6 @@ export class AnimationController {
 
   // canvas layer variables
   canvasWidth = 0;
-  canvasTop = 0;
-  canvasBottom = 0;
   canvasHeight = 0;
   canvasTotalArea = 0;
 
@@ -90,14 +91,12 @@ export class AnimationController {
     this.reziseObserver?.disconnect();
   }
 
-  updateScroll() {
-    const { top, bottom } = this.canvas.getBoundingClientRect();
-    this.canvasBottom = bottom;
-    this.canvasTop = top;
+  updateBounds() {
+    this._updateAreasBounds();
+    this.canvasBounds = this.canvas.getBoundingClientRect();
   }
 
   updateValues() {
-    this.updateScroll();
     const { width, height } = this.canvas.getBoundingClientRect();
     this.canvasWidth = this.canvas.width = width;
     this.canvasHeight = this.canvas.height = height;
@@ -107,8 +106,17 @@ export class AnimationController {
     this.clientTotalArea = this.clientHeight * this.clientWidth;
     this.numberOfParticles = this.clientTotalArea / 10800;
     this.velocity = this.clientHeight / 6;
-    this.size = Math.sqrt(this.canvasTotalArea / 300000);
+    this.size = Math.sqrt(this.clientTotalArea / 30000);
     this.parallaxProjection.parallaxAmount = this.canvasWidth / 5;
+
+    this.canvasBounds = this.canvas.getBoundingClientRect();
+    this._updateAreasBounds();
+  }
+
+  _updateAreasBounds() {
+    this.areas.forEach((area) => {
+      area.updateAreaBounds();
+    });
   }
 
   init() {
@@ -135,7 +143,7 @@ export class AnimationController {
 
   drawParticle(cx, cy, distance) {
     this.areas.forEach((area) => {
-      if (area.isParticleContained(this.canvas, cx, cy)) {
+      if (area.isParticleContained(this.canvasBounds, cx, cy)) {
         area.drawParticle(this.canvasCtx, cx, cy, distance);
       }
     });
@@ -143,7 +151,7 @@ export class AnimationController {
 
   updateParticle(particle) {
     this.areas.forEach((area) => {
-      if (area.isParticleContained(this.canvas, particle.x, particle.y)) {
+      if (area.isParticleContained(this.canvasBounds, particle.x, particle.y)) {
         area.updateParticle(particle, this.velocity, this.framesPerSecond);
       }
     });
@@ -155,23 +163,24 @@ export class AnimationController {
 
   isParticleOutOfScreen(particle) {
     return (
-      particle.y + this.canvasTop < 0 ||
-      particle.y + this.canvasTop > document.documentElement.clientHeight ||
-      this.canvasBottom < 0
+      particle.y + this.canvasBounds.top < 0 ||
+      particle.y + this.canvasBounds.top >
+        document.documentElement.clientHeight ||
+      this.canvasBounds.bottom < 0
     );
   }
 
   rainParticle() {
     this.canvasCtx.clearRect(
       0,
-      Math.max(0, -this.canvasTop),
+      Math.max(0, -this.canvasBounds.top),
       this.canvasWidth,
-      Math.min(this.canvasHeight - this.canvasTop, this.canvasHeight)
+      Math.min(this.canvasHeight - this.canvasBounds.top, this.canvasHeight)
     );
 
     this.parallaxProjection.updatePerspective();
 
-    this.updateScroll();
+    this.updateBounds();
 
     for (let i = 0; i < this.numberOfParticles; i++) {
       const particle = this.elementsRef.current[i];
