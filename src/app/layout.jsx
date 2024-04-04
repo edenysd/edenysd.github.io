@@ -18,6 +18,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/logo.svg" />
+        <meta
+          name="google-site-verification"
+          content="5Nn8isrexq1p_ml8HEyLhqXi1q4Ep1y_M5imfXdgAYg"
+        />
       </head>
       <body className={inter.className}>
         <div className="min-h-screen">{children}</div>
