@@ -77,7 +77,7 @@ const NavBarLayer = () => {
   return (
     <nav
       ref={navRef}
-      className="flex flex-row items-center text-sm sm:text-base backdrop-blur-sm bg-black/30 w-full h-16 fixed z-10 pointer-events-none"
+      className="flex flex-row items-center text-xs sm:text-base backdrop-blur-sm bg-black/30 w-full h-16 fixed z-10 pointer-events-none"
     >
       <div className={"flex flex-row h-full w-64 py-3 items-center"}>
         <a
@@ -104,7 +104,7 @@ const NavBarLayer = () => {
           </span>
         </a>
       </div>
-      <div className="flex flex-row w-full h-full font-semibold px-3">
+      <div className="flex flex-row w-full h-full font-semibold">
         <ul className="flex flex-row w-full h-full justify-end">
           {SECTIONS.map((section) => (
             <li

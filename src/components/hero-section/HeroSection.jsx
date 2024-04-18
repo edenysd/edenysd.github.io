@@ -4,7 +4,7 @@ const HeroSection = () => {
       id="hero-section"
       className="w-full h-screen align-middle flex p-0 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between bg-black"
     >
-      <div className="w-full flex py-16 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between">
+      <div className="w-full flex py-16 sm:p-16 flex-col lg:flex-row justify-center lg:justify-between overflow-hidden">
         <div
           className="flex pb-3 items-end sm:items-center"
           style={{
