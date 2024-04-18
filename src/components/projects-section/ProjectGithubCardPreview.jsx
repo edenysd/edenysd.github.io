@@ -34,8 +34,9 @@ const ProjectGithubCardPreview = ({ media }) => {
   }, [media.length]);
   return (
     <img
-      style={{ objectFit: "cover" }}
-      className={"h-full  w-full aspect-square"}
+      className={
+        "h-full w-full aspect-square rounded-lg object-cover shadow-sm shadow-black"
+      }
       ref={imgRef}
       src={media ? media[currentIndex].src : ""}
       alt={"examples"}
