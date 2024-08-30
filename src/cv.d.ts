@@ -1,7 +1,6 @@
 export interface CV {
   basics: Basics;
   work: Array<Work>;
-  volunteer: Array<Volunteer>;
   education: Array<Education>;
   awards: Array<Awards>;
   certificates: Array<Certificates>;
@@ -50,16 +49,6 @@ interface Work {
 }
 
 type DateStr = `${string}-${string}-${string}`;
-
-interface Volunteer {
-  organization: string;
-  position: string;
-  url: string;
-  startDate: DateStr;
-  endDate: DateStr;
-  summary: string;
-  highlights: Highlight;
-}
 
 interface Skills {
   name: string;
