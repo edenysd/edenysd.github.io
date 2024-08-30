@@ -43,7 +43,6 @@
       "startDate": "2023-06-01",
       "endDate": null,
       "summary": "At Subzero Ice Services, I hold the position of Front End Developer, based in Miami, USA. Since joining the team in March 2023, I've been deeply involved in enhancing the performance and functionality of the company's website. My primary responsibilities revolve around implementing optimized design patterns to ensure efficient data fetching, processing, and presentation.",
-      "highlights": ["Improved website performance by optimizing code"],
       "responsibilities": [
         "Design solutions for non trivial technical challenges.",
         "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
@@ -67,20 +66,17 @@
     },
     {
       "name": "Alegra",
-      "position": "Software Developer",
+      "position": "Frontend Developer",
       "location_type": "Remote",
       "location": "Colombia",
       "url": "https://alegra.com",
       "startDate": "2022-01-01",
       "endDate": "2023-02-01",
       "summary": "Throughout my time at Alegra, I collaborated closely with cross-functional teams, including backend developers, designers, and QA engineers, to deliver high-quality software solutions that met the company's objectives and exceeded customer expectations. By leveraging my expertise in front-end development and my dedication to delivering excellence, I contributed to Alegra's position as the leading software provider for Latino entrepreneurs.",
-      "highlights": [
-        "Contributed to a major project that streamlined internal workflows, improving efficiency by 30%"
-      ],
       "responsibilities": [
-        "Developing and maintaing frontend services using Vue 2.",
-        "Running UX experiments with different users to identify strong and weak points.",
-        "Participating in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
+        "Developed and maintaing frontend services using Vue 2.",
+        "Runned UX experiments with different users to identify strong and weak points.",
+        "Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
       ],
       "achievements": [
         "Increased customer base by 28% by creating a home section for Alegra-NE.",
@@ -88,29 +84,34 @@
         "Migrated codebase to typescript + Vue3 + microfrontends architecture allowing to embed payroll module in Alegra Plataform.",
         "Implemented a system to improve the users' document signs and reinforce this process."
       ],
-      "skills": ["Python", "Django", "SQL", "Git"]
+      "skills": ["Javascript", "Typescript", "Vue", "SQL", "Git", "AWS"]
     },
     {
-      "name": "Web Agency",
-      "position": "Intern Web Developer",
-      "location_type": "Remote",
-      "location": "Sydney, Australia",
-      "startDate": "2022-06-01",
-      "endDate": "2022-12-01",
-      "summary": "Assisted in developing client websites and applications. Gained hands-on experience with front-end and back-end technologies.",
-      "highlights": ["Completed several client projects successfully"],
-      "skills": ["HTML", "CSS"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Local Coding Club",
-      "position": "Volunteer",
-      "url": "https://codingclub.com/",
-      "startDate": "2021-01-01",
-      "endDate": "2022-01-01",
-      "summary": "Helped organize coding workshops and mentored new members.",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "name": "Localpower.io",
+      "position": "Software Developer",
+      "location_type": "Remote | Part Time",
+      "location": "Texas, United States",
+      "url": "https://localpower.io",
+      "startDate": "2022-01-01",
+      "endDate": "2022-06-01",
+      "summary": "My experience at Localpower.io provided me with valuable insights into the renewable energy sector and allowed me to further refine my skills as a Front End Developer. By contributing to the development of a platform aimed at promoting sustainable energy solutions, I was able to align my passion for technology with a broader societal goal of environmental sustainability.",
+      "responsibilities": [
+        "Developed and maintaing frontend services using React.",
+        "Improved and added custom components following Material UI 2 directives.",
+        "Researched about mathematical issues arround the Localpower Editor Tool."
+      ],
+      "achievements": [
+        "Integrated Google Maps js API with React to create a design tool used to conﬁgure and present sales proposals reducing the workﬂow time by 34%.",
+        "Created a set of custom dnd widgets to improving the overall plataform UX.",
+        "Optimized/Migrated legacy components to new industry standards."
+      ],
+      "skills": [
+        "Javascript",
+        "React",
+        "Algorithms",
+        "Spatial Geometry",
+        "Google Maps"
+      ]
     }
   ],
   "education": [
