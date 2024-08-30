@@ -42,9 +42,8 @@
       "url": "https://subzero-order.com/.com",
       "startDate": "2023-06-01",
       "endDate": null,
-      "summary": "At Subzero Ice Services, I hold the position of Front End Developer, based in Miami, USA. Since joining the team in March 2023, I've been deeply involved in enhancing the performance and functionality of the company's website. My primary responsibilities revolve around implementing optimized design patterns to ensure efficient data fetching, processing, and presentation.",
+      "summary": "At Subzero Ice Services I had been deeply involved in enhancing the performance and functionality of the company's website. My primary responsibilities revolve around implementing optimized design patterns to ensure efficient data fetching, processing, and presentation.",
       "responsibilities": [
-        "Design solutions for non trivial technical challenges.",
         "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
         "Participated in code reviews and contributed to improving coding standards within the team."
       ],
@@ -52,7 +51,7 @@
         "Enhanced website performance through the implementation of optimized design patterns for eﬃcient data fetching, processing, and presentation.",
         "Implemented mechanisms to synchronize users' information across sessions",
         "Established a customer store to automate the sales, billing, and delivery processes increasing sales by 57%.",
-        "Run learning spaces for the improving of the team."
+        "Run learning spaces improving of the team understanding of key topics related to the busines."
       ],
       "skills": [
         "React",
@@ -92,7 +91,7 @@
       "location_type": "Remote | Part Time",
       "location": "Texas, United States",
       "url": "https://localpower.io",
-      "startDate": "2022-01-01",
+      "startDate": "2021-12-01",
       "endDate": "2022-06-01",
       "summary": "My experience at Localpower.io provided me with valuable insights into the renewable energy sector and allowed me to further refine my skills as a Front End Developer. By contributing to the development of a platform aimed at promoting sustainable energy solutions, I was able to align my passion for technology with a broader societal goal of environmental sustainability.",
       "responsibilities": [
@@ -104,6 +103,34 @@
         "Integrated Google Maps js API with React to create a design tool used to conﬁgure and present sales proposals reducing the workﬂow time by 34%.",
         "Created a set of custom dnd widgets to improving the overall plataform UX.",
         "Optimized/Migrated legacy components to new industry standards."
+      ],
+      "skills": [
+        "Javascript",
+        "React",
+        "Algorithms",
+        "Spatial Geometry",
+        "Google Maps"
+      ]
+    },
+    {
+      "name": "General Software Inc",
+      "position": "Backend Developer",
+      "location_type": "Remote",
+      "location": "Havana, Cuba",
+      "url": "https://localpower.io",
+      "startDate": "2020-07-01",
+      "endDate": "2021-01-01",
+      "summary": "During my path at GSI I fell in love with the Python language. Worked with ERPNext creating new custom modules, themes and handcrafted vanilla JS field extensions.",
+      "responsibilities": [
+        "Investigated existing solutions in other ERPs for common requested features.",
+        "Participated in code reviews with senior developers.",
+        "Maintained services using ERPNext framework using python.",
+        "Ensured plataform performance and security."
+      ],
+      "achievements": [
+        "Implemented a new applicant workﬂow for the ERP reducing spend in the early stages of hiring by 80%.",
+        "Created custom widgets with their data models to improve UI/UX/DX extending the base stack toolkit and allowing more complex use cases.",
+        "Created and optimized database migrations reducing server downtime by ~20%."
       ],
       "skills": [
         "Javascript",
