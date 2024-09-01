@@ -109,8 +109,7 @@ type Language =
   | "Russian"
   | "Turkish"
   | "Hindi"
-  | "Bengali"
-  | string;
+  | "Bengali";
 
 interface Projects {
   name: string;
