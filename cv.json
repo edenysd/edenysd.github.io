@@ -1,4 +1,5 @@
 {
+  "$schema": "./cv.schema.json",
   "basics": {
     "name": "Edenys Denis González",
     "label": "Computer Scientist | Software Engineer",
