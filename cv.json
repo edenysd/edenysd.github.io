@@ -74,7 +74,7 @@
       "endDate": "2023-02-01",
       "summary": "Throughout my time at Alegra, I collaborated closely with cross-functional teams, including backend developers, designers, and QA engineers, to deliver high-quality software solutions that met the company's objectives and exceeded customer expectations. By leveraging my expertise in front-end development and my dedication to delivering excellence, I contributed to Alegra's position as the leading software provider for Latino entrepreneurs.",
       "responsibilities": [
-        "Developed and maintaing frontend services using Vue 2.",
+        "Developed and maintained frontend services using Vue 2.",
         "Runned UX experiments with different users to identify strong and weak points.",
         "Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
       ],
@@ -154,14 +154,7 @@
       "courses": []
     }
   ],
-  "certificates": [
-    {
-      "name": "Full Stack Web Development",
-      "date": "2023-05-01",
-      "issuer": "Online University",
-      "url": "https://onlineuniversity.com/certificates/fullstack"
-    }
-  ],
+  "certificates": [],
   "skills": [
     {
       "name": "Figma",
@@ -310,5 +303,14 @@
       ],
       "url": "https://ecommerce.com"
     }
-  ]
+  ],
+  "awards": [
+    {
+      "awarder": "Universidad Central Marta Abreu de Las Villas",
+      "date": "2023-12-23",
+      "summary": "",
+      "title": "Cum Laude"
+    }
+  ],
+  "publications": []
 }
