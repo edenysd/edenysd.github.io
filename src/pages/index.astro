@@ -17,7 +17,7 @@ const { name, label } = basics;
 
 <Layout title={`${name} Portafolio - ${label}`}>
   <main
-    class="relative grid max-w-7xl gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6"
+    class="relative grid max-w-7xl gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6 print:py-0"
   >
     <div
       class="space-y-6 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0"
@@ -46,6 +46,12 @@ const { name, label } = basics;
     margin: 0mm;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  @page :first {
+    margin-top: 50px;
+  }
+  #page-heading {
+    content: "HEEEEE";
   }
   main {
     margin: auto;
