@@ -27,11 +27,11 @@ const { name, label } = basics;
       <ThemeSwitch />
     </div>
     <div
-      class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0"
+      class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-4 print:space-y-0"
     >
       <Experience className="print:col-span-4" />
       <Projects className="print:hidden" />
-      <Skills className="print:col-span-4" />
+      <Skills className="print:col-span-4 print:gap-2" />
       <Education className="print:hidden" />
     </div>
     <Tail />
@@ -44,6 +44,8 @@ const { name, label } = basics;
   @page {
     size: auto;
     margin: 0mm;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   main {
     margin: auto;
