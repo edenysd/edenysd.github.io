@@ -25,7 +25,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
 
 <Section>
-	<div class="flex flex-col-reverse gap-8">
+	<div class="flex flex-col-reverse gap-8 relative">
 		<div class="info">
 			<h1>{name}</h1>
 			<h2>{label}</h2>
@@ -85,7 +85,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 				</div>
 			</footer>
 		</div>
-		<figure class="print:hidden w-fit relative ml-2 md:ml-0">
+		<figure class="print:hidden w-fit sticky ml-2 md:ml-0">
 			<img class="shadow-lg shadow-skin-hues" src={image} alt={name} />
 			<div class="pointer-events-none absolute -inset-2">
 				<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
