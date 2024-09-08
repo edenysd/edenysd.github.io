@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@alpinejs/collapse':
+        specifier: ^3.14.1
+        version: 3.14.1
       '@astrojs/alpinejs':
         specifier: ^0.4.0
         version: 0.4.0(@types/alpinejs@3.13.10)(alpinejs@3.14.1)
@@ -17,9 +20,6 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.3.2(typescript@5.5.4))(tailwindcss@3.4.4)
-      '@types/alpinejs':
-        specifier: ^3.13.10
-        version: 3.13.10
       alpinejs:
         specifier: ^3.14.1
         version: 3.14.1
@@ -32,6 +32,19 @@ importers:
       hotkeypad:
         specifier: 0.1.0
         version: 0.1.0
+    devDependencies:
+      '@types/alpinejs':
+        specifier: ^3.13.10
+        version: 3.13.10
+      '@types/alpinejs__collapse':
+        specifier: ^3.13.4
+        version: 3.13.4
+      prettier:
+        specifier: ^3.3.2
+        version: 3.3.2
+      prettier-plugin-astro:
+        specifier: ^0.14.0
+        version: 0.14.0
       prettier-plugin-tailwindcss:
         specifier: ^0.6.5
         version: 0.6.6(prettier-plugin-astro@0.14.0)(prettier@3.3.2)
@@ -41,19 +54,15 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
-    devDependencies:
-      prettier:
-        specifier: ^3.3.2
-        version: 3.3.2
-      prettier-plugin-astro:
-        specifier: ^0.14.0
-        version: 0.14.0
 
 packages:
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@alpinejs/collapse@3.14.1':
+    resolution: {integrity: sha512-aI0pq8SjK7c43/nMIVL1Lt8naowPRepqQGNSb9KaG7adEneOwj/vq4ZaeZYjuGbd8sq1LKPwWU+klIZIXXujUA==}
 
   '@ampproject/remapping@2.2.1':
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
@@ -486,6 +495,9 @@ packages:
 
   '@types/alpinejs@3.13.10':
     resolution: {integrity: sha512-ah53tF6mWuuwerpDE7EHwbZErNDJQlsLISPqJhYj2RZ9nuTYbRknSkqebUd3igkhLIZKkPa7IiXjSn9qsU9O2w==}
+
+  '@types/alpinejs__collapse@3.13.4':
+    resolution: {integrity: sha512-kUBJWEDrHahD2Tb1lrir7iNTGN9ukvoJFjOY41EGC7F21E1KMSch5NrGgE0sqINrRT3lf1UZm3wxB3CNjJHBwg==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2376,6 +2388,8 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
+  '@alpinejs/collapse@3.14.1': {}
+
   '@ampproject/remapping@2.2.1':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
@@ -2800,6 +2814,10 @@ snapshots:
     optional: true
 
   '@types/alpinejs@3.13.10': {}
+
+  '@types/alpinejs__collapse@3.13.4':
+    dependencies:
+      '@types/alpinejs': 3.13.10
 
   '@types/babel__core@7.20.5':
     dependencies:
