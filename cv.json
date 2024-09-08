@@ -7,7 +7,7 @@
     "email": "edenys.denis@outlook.com",
     "phone": "",
     "url": "https://johndoe.dev",
-    "summary": "Experienced in the web ecosystem as software engineer. I have worked with most of the legacy and emerging technologies sometimes for work but most for fun.",
+    "summary": "Experienced in the web ecosystem as software engineer. Worked with most of the legacy and emerging technologies with a strong focus on React and its flavours.",
     "theme": "default",
     "location": {
       "address": "",
@@ -241,17 +241,17 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "Native speaker"
+      "fluency": "Limited to Work"
     },
     {
       "language": "Spanish",
-      "fluency": "Intermediate"
+      "fluency": "Native speaker"
     }
   ],
   "interests": [
     {
       "name": "Technology",
-      "keywords": ["AI", "Blockchain"]
+      "keywords": ["AI/ML", "Rust"]
     }
   ],
   "references": [
@@ -312,5 +312,13 @@
       "title": "Cum Laude"
     }
   ],
-  "publications": []
+  "publications": [
+    {
+      "name": "Author Name Disambiguation in LAGOS-AND using an hybrid approach (2023) UCLV",
+      "publisher": "UCLV",
+      "releaseDate": "2023-12-03",
+      "summary": "The disambiguation of author names focuses mainly on studying the problems of synonyms and homonyms. Using multiple IA/ML techniques plus Rust-powered algorithms in critical points we obtain best-in-class results in the LAGOS-AND dataset.",
+      "url": ""
+    }
+  ]
 }
