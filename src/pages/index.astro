@@ -21,8 +21,14 @@ const { name, label } = basics;
   >
     <div class="relative space-y-6 md:col-span-2 print:col-span-1">
       <div
-        class="sticky top-8 grid gap-4 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0"
+        class="sticky right-0 top-8 grid gap-4 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0"
       >
+        <div class="absolute top-0 -z-10 h-full w-full print:hidden">
+          <div
+            class="rotate-focus absolute h-[200px] w-[200px] rounded-full bg-skin-hue/30 blur-[80px] invert-0"
+          >
+          </div>
+        </div>
         <Hero />
         <About className="gap-0" />
         <ThemeSwitch />
@@ -53,10 +59,37 @@ const { name, label } = basics;
     margin-top: 50px;
   }
   #page-heading {
-    content: "HEEEEE";
+    content: "";
   }
   main {
     margin: auto;
     width: 100%;
+  }
+
+  @keyframes move-focus {
+    0% {
+      transform: translate(100px, 200px);
+    }
+    20% {
+      transform: translate(-100px, 200px);
+    }
+    30% {
+      transform: translate(40px, 100px) scale(1.5);
+    }
+    60% {
+      transform: translate(100px, -100px);
+    }
+    70% {
+      transform: translate(-100px, -100px);
+    }
+    100% {
+      transform: translate(100px, 200px);
+    }
+  }
+  .rotate-focus {
+    transition: all;
+    animation:
+      move-focus 20000ms cubic-bezier(1, -1.9, 0, 2.87) infinite forwards,
+      pulse 1s ease-in-out infinite;
   }
 </style>
