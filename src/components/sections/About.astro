@@ -5,8 +5,8 @@ import { basics } from "@cv";
 const { summary } = basics;
 ---
 
-<Section title="About">
-	<p>
-		{summary}
-	</p>
+<Section title="About" className={Astro.props.className}>
+  <p>
+    {summary}
+  </p>
 </Section>
