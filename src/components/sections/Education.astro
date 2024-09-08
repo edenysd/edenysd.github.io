@@ -6,7 +6,7 @@ import { certificates } from "@cv";
 ---
 
 <Section className={Astro.props.className} title="Education">
-  <ul class="space-y-4 py-3 print:space-y-0">
+  <ul class="space-y-4 print:space-y-0">
     {
       education.map(({ institution, startDate, endDate, area, url }) => {
         const startYear = new Date(startDate).getUTCFullYear();
