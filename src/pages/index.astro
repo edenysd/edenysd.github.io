@@ -10,6 +10,7 @@ import Skills from "@/components/sections/Skills.astro";
 import Tail from "@/components/sections/Tail.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
+import Languages from "@/components/sections/Languages.astro";
 
 import { basics } from "@cv";
 const { name, label } = basics;
@@ -41,6 +42,7 @@ const { name, label } = basics;
       <Projects className="print:hidden" />
       <Skills className="print:col-span-4 print:gap-2" />
       <Education className="print:hidden" />
+      <Languages />
     </div>
     <Tail />
   </main>
