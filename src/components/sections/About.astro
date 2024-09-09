@@ -6,7 +6,11 @@ const { summary } = basics;
 ---
 
 <Section title="About" className={Astro.props.className}>
-  <p>
-    {summary}
-  </p>
+  <div class="relative grid gap-1">
+    {
+      summary
+        .split("\n")
+        .map((text) => <p class="whitespace-pre-line">{text}</p>)
+    }
+  </div>
 </Section>
