@@ -84,7 +84,7 @@
         "Migrated codebase to typescript + Vue3 + microfrontends architecture allowing to embed payroll module in Alegra Plataform.",
         "Implemented a system to improve the users' document signs and reinforce this process."
       ],
-      "skills": ["Javascript", "Typescript", "Vue", "SQL", "Git", "AWS"]
+      "skills": ["JavaScript", "TypeScript", "Vue", "SQL", "Git", "AWS"]
     },
     {
       "name": "Localpower.io",
@@ -106,7 +106,7 @@
         "Optimized/Migrated legacy components to new industry standards."
       ],
       "skills": [
-        "Javascript",
+        "JavaScript",
         "React",
         "Algorithms",
         "Spatial Geometry",
@@ -133,13 +133,7 @@
         "Created custom widgets with their data models to improve UI/UX/DX extending the base stack toolkit and allowing more complex use cases.",
         "Created and optimized database migrations reducing server downtime by ~20%."
       ],
-      "skills": [
-        "Javascript",
-        "React",
-        "Algorithms",
-        "Spatial Geometry",
-        "Google Maps"
-      ]
+      "skills": ["Python", "JavaScript", "ERPNext", "Django", "Gitlab", "CSS"]
     }
   ],
   "education": [
