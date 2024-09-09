@@ -244,8 +244,16 @@
   ],
   "interests": [
     {
-      "name": "Technology",
-      "keywords": ["AI/ML", "Rust"]
+      "name": "Rust",
+      "keywords": ["Programming Language", "Rust"]
+    },
+    {
+      "name": "IA/ML",
+      "keywords": []
+    },
+    {
+      "name": "React",
+      "keywords": []
     }
   ],
   "references": [
