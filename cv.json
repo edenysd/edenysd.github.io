@@ -274,46 +274,51 @@
   ],
   "projects": [
     {
-      "name": "Personal Portfolio",
-      "isActive": false,
-      "description": "A personal portfolio website to showcase my projects and skills.",
-      "highlights": [
-        "Built with React and Tailwind CSS",
-        "Includes a blog and contact form"
-      ],
-      "url": "https://johndoe.dev",
-      "github": "https://github.com"
-    },
-    {
-      "name": "Weather App",
+      "name": "Quickie Form",
       "isActive": true,
-      "description": "A web application that provides weather information for any location.",
+      "description": "Manage your form creation, publication and analysis in one place, every step powered by specialized AI agents.",
       "highlights": [
-        "Built with JavaScript and OpenWeatherMap API",
-        "Responsive design"
+        "Built with Remix, Supabase, Vercel AI SDK and Material UI 5",
+        "Multiple AI agents for content generation and processing",
+        "Adaptative Design",
+        "Authentication & authorization with strict rules"
       ],
-      "url": "https://weatherapp.com"
+      "url": "https://quickieform.com",
+      "github": "https://github.com/edenysd/quickie-form"
     },
     {
-      "name": "Task Manager",
-      "isActive": true,
-      "description": "A simple task management app to keep track of daily tasks.",
-      "highlights": [
-        "Built with Node.js and MongoDB",
-        "User authentication and CRUD operations"
-      ],
-      "url": "https://taskmanager.com",
-      "github": "https://github.com"
-    },
-    {
-      "name": "E-commerce Site",
+      "name": "Weather Pipe",
       "isActive": false,
-      "description": "An online store built with Next.js and Stripe for payment processing.",
+      "description": "Real-time weather monitor with seamless user interactions.",
       "highlights": [
-        "Product management and shopping cart functionality",
-        "Secure payment integration"
+        "Built with MeteorJS, OpenWeatherMap API, SolidJS and OpenStreetMap",
+        "Interactive layered maps displaying various weather-related data.",
+        "Dashboard customization for custom tracked data",
+        "Real-time weather updates",
+        "Custom cache policies for 3rd party APIs"
       ],
-      "url": "https://ecommerce.com"
+      "github": "https://github.com/edenysd/weather-pipe"
+    },
+    {
+      "name": "El Gato y el Raton",
+      "isActive": false,
+      "description": "Adaptation of the classic board game for Android",
+      "highlights": [
+        "Built only using the skia wrapper for Android and some concurrency utilities",
+        "Custom mini game engine with generic primitives",
+        "Based on the learnings from The Beginner's Guide to Android Game Development by James S. Cho"
+      ],
+      "github": "https://github.com/edenysd/El-Gato-y-el-Raton"
+    },
+    {
+      "name": "Histlog",
+      "isActive": false,
+      "description": "Didatic role-play chat game using ISO Prolog as logic engine.",
+      "highlights": [
+        "Built with VueJS and Tau Prolog as Prolog interpreter in JavaScript",
+        "Gamify prolog learning with extensible histories"
+      ],
+      "github": "https://github.com/edenysd/histlog"
     }
   ],
   "awards": [
