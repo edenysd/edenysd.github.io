@@ -41,8 +41,17 @@ export const SKILLS_ICONS: Record<string, any> = {
 ---
 
 <Section className={Astro.props.className} title="Skills">
+  <p class="hidden gap-1 print:flex">
+    {
+      skills
+        .map(({ name }) => {
+          return name;
+        })
+        .join(", ")
+    }
+  </p>
   <ul
-    class="inline-flex flex-wrap gap-6 print:gap-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+    class="flex flex-wrap gap-6 print:hidden [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
   >
     {
       skills.map(({ name }) => {
@@ -50,9 +59,11 @@ export const SKILLS_ICONS: Record<string, any> = {
         const Icon = SKILLS_ICONS[iconName];
 
         return (
-          <li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex items-center gap-1 rounded-md px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-            {Icon && <Icon />} <span>{name}</span>
-          </li>
+          <>
+            <li class="flex items-center gap-1 px-2 py-0.5 text-xs text-skin-muted">
+              {Icon && <Icon />} <span>{name}</span>
+            </li>
+          </>
         );
       })
     }
