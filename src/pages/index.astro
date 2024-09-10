@@ -13,6 +13,7 @@ import ThemeSwitch from "@/components/ThemeSwitch.astro";
 import Languages from "@/components/sections/Languages.astro";
 import Interests from "@/components/sections/Interests.astro";
 import { basics } from "@cv";
+import Awards from "@/components/sections/Awards.astro";
 
 const { name, label } = basics;
 ---
@@ -42,9 +43,10 @@ const { name, label } = basics;
       <Experience className="print:col-span-4" />
       <Projects className="print:hidden" />
       <Skills className="print:col-span-4 print:gap-2" />
-      <Education className="print:hidden" />
       <Languages />
-      <Interests />
+      <Education className="print:hidden" />
+      <Awards className="print:hidden" />
+      <Interests className="print:hidden" />
     </div>
     <Tail />
   </main>
