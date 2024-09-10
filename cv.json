@@ -308,10 +308,28 @@
   ],
   "awards": [
     {
+      "awarder": "Vercel Hackathon",
+      "date": "2024-09-13",
+      "summary": "For the outstanding quality of the Quickie Form platform and the seamless integration of UI/UX with AI/ML features in the presented workflows.",
+      "title": "Honorable Mention Vercel AI Hackathon"
+    },
+    {
+      "awarder": "Universidad Central Marta Abreu de Las Villas",
+      "date": "2023-12-23",
+      "summary": "For the research work throughout the degree",
+      "title": "Scientific Merit Award"
+    },
+    {
       "awarder": "Universidad Central Marta Abreu de Las Villas",
       "date": "2023-12-23",
       "summary": "",
       "title": "Cum Laude"
+    },
+    {
+      "awarder": "International Collegiate Programming Contest (ICPC)",
+      "date": "2019-06-14",
+      "summary": "Team: 3N1?M4",
+      "title": "ICPC Caribean Finals 2019 4th Place"
     }
   ],
   "publications": [
