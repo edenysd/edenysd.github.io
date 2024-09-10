@@ -1,0 +1,30 @@
+---
+import Section from "../Section.astro";
+
+import { publications } from "@cv";
+---
+
+<Section className={Astro.props.className} title="Publications">
+  <ul class="space-y-4 print:space-y-0">
+    {
+      publications.map(({ name, summary, publisher, releaseDate, url }) => {
+        const year = new Date(releaseDate).getUTCFullYear();
+
+        return (
+          <div class="relative grid w-full gap-1">
+            <h3 class="mr-6 flex items-center gap-x-2 gap-y-0.5 fill-skin-hue font-medium">
+              {name}
+            </h3>
+            <p class="mr-6 flex items-baseline gap-x-2 gap-y-0.5 text-skin-base">
+              {publisher}
+            </p>
+            <p class="mr-6 text-sm text-skin-muted">{summary}</p>
+            <time class="right-0 top-0 text-xs text-skin-muted md:absolute md:block">
+              {year}
+            </time>
+          </div>
+        );
+      })
+    }
+  </ul>
+</Section>
