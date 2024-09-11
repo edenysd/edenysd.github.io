@@ -276,11 +276,11 @@
     {
       "name": "Quickie Form",
       "isActive": true,
-      "description": "Manage your form creation, publication and analysis in one place, every step powered by specialized AI agents.",
+      "description": "Manage your form creation, publication, and analysis in one place, every step powered by specialized AI agents.",
       "highlights": [
-        "Built with Remix, Supabase, Vercel AI SDK and Material UI 5",
+        "Built with Remix, Supabase, Vercel AI SDK, and Material UI 5",
         "Multiple AI agents for content generation and processing",
-        "Adaptative Design",
+        "Adaptive Design",
         "Authentication & authorization with strict rules"
       ],
       "url": "https://quickieform.com",
@@ -291,7 +291,7 @@
       "isActive": false,
       "description": "Real-time weather monitor with seamless user interactions.",
       "highlights": [
-        "Built with MeteorJS, OpenWeatherMap API, SolidJS and OpenStreetMap",
+        "Built with MeteorJS, OpenWeatherMap API, SolidJS, and OpenStreetMap",
         "Interactive layered maps displaying various weather-related data.",
         "Dashboard customization for custom tracked data",
         "Real-time weather updates",
@@ -300,23 +300,23 @@
       "github": "https://github.com/edenysd/weather-pipe"
     },
     {
-      "name": "El Gato y el Raton",
+      "name": "El Gato y el Ratón",
       "isActive": false,
-      "description": "Adaptation of the classic board game for Android",
+      "description": "Adaptation of the classic board game for Android.",
       "highlights": [
         "Built only using the skia wrapper for Android and some concurrency utilities",
         "Custom mini game engine with generic primitives",
-        "Based on the learnings from The Beginner's Guide to Android Game Development by James S. Cho"
+        "Based on learnings from 'The Beginner's Guide to Android Game Development' by James S. Cho"
       ],
       "github": "https://github.com/edenysd/El-Gato-y-el-Raton"
     },
     {
       "name": "Histlog",
       "isActive": false,
-      "description": "Didatic role-play chat game using ISO Prolog as logic engine.",
+      "description": "Didactic role-play chat game using ISO Prolog as a logic engine.",
       "highlights": [
-        "Built with VueJS and Tau Prolog as Prolog interpreter in JavaScript",
-        "Gamify prolog learning with extensible histories"
+        "Built with VueJS and Tau Prolog as a Prolog interpreter in JavaScript",
+        "Gamify Prolog learning with extensible histories"
       ],
       "github": "https://github.com/edenysd/histlog"
     }
@@ -331,7 +331,7 @@
     {
       "awarder": "Universidad Central Marta Abreu de Las Villas",
       "date": "2023-12-23",
-      "summary": "For the research work throughout the degree",
+      "summary": "For the research work throughout the degree.",
       "title": "Scientific Merit Award"
     },
     {
@@ -344,15 +344,15 @@
       "awarder": "International Collegiate Programming Contest (ICPC)",
       "date": "2019-06-14",
       "summary": "Team: 3N1?M4",
-      "title": "ICPC Caribean Finals 2019 4th Place"
+      "title": "ICPC Caribbean Finals 2019 4th Place"
     }
   ],
   "publications": [
     {
-      "name": "Author Name Disambiguation in LAGOS-AND using an hybrid approach",
+      "name": "Author Name Disambiguation in LAGOS-AND using a Hybrid Approach",
       "publisher": "UCLV",
       "releaseDate": "2023-12-03",
-      "summary": "The disambiguation of author names focuses mainly on studying the problems of synonyms and homonyms. Using multiple AI/ML techniques plus Rust-powered algorithms in critical points we obtain best-in-class results in the LAGOS-AND dataset.",
+      "summary": "The disambiguation of author names focuses mainly on studying the problems of synonyms and homonyms. Using multiple AI/ML techniques, plus Rust-powered algorithms at critical points, we achieved best-in-class results in the LAGOS-AND dataset.",
       "url": ""
     }
   ]
