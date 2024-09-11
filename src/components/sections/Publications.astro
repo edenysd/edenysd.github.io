@@ -7,7 +7,7 @@ import { publications } from "@cv";
 <Section className={Astro.props.className} title="Publications">
   <ul class="space-y-4 print:space-y-0">
     {
-      publications.map(({ name, summary, publisher, releaseDate, url }) => {
+      publications.map(({ name, summary, publisher, releaseDate }) => {
         const year = new Date(releaseDate).getUTCFullYear();
 
         return (
