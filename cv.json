@@ -7,7 +7,7 @@
     "email": "edenys.denis@outlook.com",
     "phone": "",
     "url": "https://johndoe.dev",
-    "summary": "Experienced in the web ecosystem as software engineer.\nWorked with a large variety of legacy and emerging frontend technologies with a strong focus on React and its flavours.\n Aditionally a big enjoyer of AI/ML and Rust.",
+    "summary": "Experienced in the web ecosystem as a software engineer.\nWorked with a large variety of legacy and emerging frontend technologies, with a strong focus on React and its flavors.\nAdditionally, a big enthusiast of AI/ML and Rust.",
     "theme": "default",
     "location": {
       "address": "",
@@ -43,16 +43,16 @@
       "url": "https://subzero-order.com/.com",
       "startDate": "2023-06-01",
       "endDate": null,
-      "summary": "At Subzero Ice Services I had been deeply involved in enhancing the performance and functionality of the company's website. My primary responsibilities revolve around implementing optimized design patterns to ensure efficient data fetching, processing, and presentation.",
+      "summary": "At Subzero Ice Services, I have been deeply involved in enhancing the performance and functionality of the company's website. My primary responsibilities revolve around implementing optimized design patterns to ensure efficient data fetching, processing, and presentation.",
       "responsibilities": [
         "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
         "Participated in code reviews and contributed to improving coding standards within the team."
       ],
       "achievements": [
-        "Enhanced website performance through the implementation of optimized design patterns for eﬃcient data fetching, processing, and presentation.",
-        "Implemented mechanisms to synchronize users' information across sessions",
-        "Established a customer store to automate the sales, billing, and delivery processes increasing sales by 57%.",
-        "Run learning spaces improving of the team understanding of key topics related to the busines."
+        "Enhanced website performance through the implementation of optimized design patterns for efficient data fetching, processing, and presentation.",
+        "Implemented mechanisms to synchronize users' information across sessions.",
+        "Established a customer store to automate sales, billing, and delivery processes, increasing sales by 57%.",
+        "Led learning sessions to improve the team's understanding of key business topics."
       ],
       "skills": [
         "React",
@@ -72,17 +72,17 @@
       "url": "https://alegra.com",
       "startDate": "2022-01-01",
       "endDate": "2023-02-01",
-      "summary": "Throughout my time at Alegra, I collaborated closely with cross-functional teams, including backend developers, designers, and QA engineers, to deliver high-quality software solutions that met the company's objectives and exceeded customer expectations. By leveraging my expertise in front-end development and my dedication to delivering excellence, I contributed to Alegra's position as the leading software provider for Latino entrepreneurs.",
+      "summary": "At Alegra, I collaborated closely with cross-functional teams, including backend developers, designers, and QA engineers, to deliver high-quality software solutions that met the company's objectives and exceeded customer expectations. Leveraging my expertise in front-end development and my dedication to delivering excellence, I contributed to Alegra's position as a leading software provider for Latino entrepreneurs.",
       "responsibilities": [
         "Developed and maintained frontend services using Vue 2.",
-        "Runned UX experiments with different users to identify strong and weak points.",
+        "Conducted UX experiments with different users to identify strengths and weaknesses.",
         "Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
       ],
       "achievements": [
         "Increased customer base by 28% by creating a home section for Alegra-NE.",
-        "Created new Dashboard and Onboarding modules for the payroll ecosystem",
-        "Migrated codebase to typescript + Vue3 + microfrontends architecture allowing to embed payroll module in Alegra Plataform.",
-        "Implemented a system to improve the users' document signs and reinforce this process."
+        "Created new dashboard and onboarding modules for the payroll ecosystem.",
+        "Migrated the codebase to TypeScript + Vue3 + microfrontends architecture, enabling the payroll module to be embedded in the Alegra Platform.",
+        "Implemented a system to improve user document signing and reinforced this process."
       ],
       "skills": ["JavaScript", "TypeScript", "Vue", "SQL", "Git", "AWS"]
     },
@@ -94,16 +94,16 @@
       "url": "https://localpower.io",
       "startDate": "2021-12-01",
       "endDate": "2022-06-01",
-      "summary": "My experience at Localpower.io provided me with valuable insights into the renewable energy sector and allowed me to further refine my skills as a Front End Developer. By contributing to the development of a platform aimed at promoting sustainable energy solutions, I was able to align my passion for technology with a broader societal goal of environmental sustainability.",
+      "summary": "At Localpower.io, I gained valuable insights into the renewable energy sector and further refined my skills as a Front End Developer. By contributing to the development of a platform aimed at promoting sustainable energy solutions, I aligned my passion for technology with the broader societal goal of environmental sustainability.",
       "responsibilities": [
-        "Developed and maintaing frontend services using React.",
+        "Developed and maintained frontend services using React.",
         "Improved and added custom components following Material UI 2 directives.",
-        "Researched about mathematical issues arround the Localpower Editor Tool."
+        "Researched mathematical issues related to the Localpower Editor Tool."
       ],
       "achievements": [
-        "Integrated Google Maps js API with React to create a design tool used to conﬁgure and present sales proposals reducing the workﬂow time by 34%.",
-        "Created a set of custom dnd widgets to improving the overall plataform UX.",
-        "Optimized/Migrated legacy components to new industry standards."
+        "Integrated Google Maps JS API with React to create a design tool used to configure and present sales proposals, reducing workflow time by 34%.",
+        "Created a set of custom drag-and-drop widgets, improving the overall platform UX.",
+        "Optimized/migrated legacy components to meet new industry standards."
       ],
       "skills": [
         "JavaScript",
@@ -121,17 +121,17 @@
       "url": "https://localpower.io",
       "startDate": "2020-07-01",
       "endDate": "2021-01-01",
-      "summary": "During my path at GSI I fell in love with the Python language. Worked with ERPNext creating new custom modules, themes and handcrafted vanilla JS field extensions.",
+      "summary": "At GSI, I developed a strong passion for the Python language. I worked with ERPNext, creating new custom modules, themes, and handcrafted vanilla JS field extensions.",
       "responsibilities": [
-        "Investigated existing solutions in other ERPs for common requested features.",
+        "Researched existing solutions in other ERPs for commonly requested features.",
         "Participated in code reviews with senior developers.",
-        "Maintained services using ERPNext framework using python.",
-        "Ensured plataform performance and security."
+        "Maintained services using the ERPNext framework in Python.",
+        "Ensured platform performance and security."
       ],
       "achievements": [
-        "Implemented a new applicant workﬂow for the ERP reducing spend in the early stages of hiring by 80%.",
-        "Created custom widgets with their data models to improve UI/UX/DX extending the base stack toolkit and allowing more complex use cases.",
-        "Created and optimized database migrations reducing server downtime by ~20%."
+        "Implemented a new applicant workflow for the ERP, reducing hiring costs in the early stages by 80%.",
+        "Created custom widgets with corresponding data models to improve UI/UX/DX, extending the base toolkit and allowing for more complex use cases.",
+        "Created and optimized database migrations, reducing server downtime by ~20%."
       ],
       "skills": ["Python", "JavaScript", "ERPNext", "Django", "Gitlab", "CSS"]
     }
