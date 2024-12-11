@@ -36,13 +36,32 @@
   },
   "work": [
     {
+      "name": "Tropipay",
+      "position": "Backend Developer",
+      "location_type": "Remote",
+      "location": "Madrid, Spain",
+      "url": "https://tropipay.com",
+      "startDate": "2024-10-01",
+      "endDate": null,
+      "summary": "As a Backend Developer at Tropipay, I focused on designing and maintaining scalable backend solutions for payment services. My work involved creating innovative systems like Senda, enhancing user experience, and collaborating with cross-functional teams to resolve technical challenges efficiently.",
+      "responsibilities": [
+        "Designed and implemented the Senda backend, a suite of services enabling users to support their families through a variety of options.",
+        "Provided technical assistance to the support team, enabling the resolution of tickets promptly and efficiently."
+      ],
+      "achievements": [
+        "Increased Senda's user base by 43% through the development of new modules, including voucher and recharge functionalities.",
+        "Established Grafana infrastructure to monitor all Senda modules with a high level of detail, ensuring reliability and proactive issue resolution."
+      ],
+      "skills": ["REST APIs", "NestJS", "Payment Services", "Grafana"]
+    },
+    {
       "name": "SUBZERO ICE SERVICES INC",
       "position": "Senior Frontend Developer",
       "location_type": "Remote",
       "location": "Miami, Florida, United States",
-      "url": "https://subzero-order.com/.com",
+      "url": "https://subzero-order.com/",
       "startDate": "2023-06-01",
-      "endDate": null,
+      "endDate": "2025-01-01",
       "summary": "At Subzero Ice Services, I have been deeply involved in enhancing the performance and functionality of the company's website. My primary responsibilities revolve around implementing optimized design patterns to ensure efficient data fetching, processing, and presentation.",
       "responsibilities": [
         "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
@@ -140,7 +159,7 @@
     {
       "institution": "Universidad Central Marta Abreu de Las Villas",
       "url": "https://www.uclv.edu.cu",
-      "area": "Computer Science",
+      "area": "Lic. Computer Science",
       "studyType": "Bachelor",
       "startDate": "2018-09-01",
       "endDate": "2023-12-01",
