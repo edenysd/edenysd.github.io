@@ -260,6 +260,21 @@
       "name": "SQL",
       "level": "Intermediate",
       "keywords": ["Backend Development", "Databases"]
+    },
+    {
+      "name": "Python",
+      "level": "Intermediate",
+      "keywords": ["Backend Development", "Databases"]
+    },
+    {
+      "name": "NestJS",
+      "level": "Intermediate",
+      "keywords": ["Backend Development", "Databases"]
+    },
+    {
+      "name": "AI/ML",
+      "level": "Intermediate",
+      "keywords": ["Machine Learning"]
     }
   ],
   "languages": [
