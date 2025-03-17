@@ -49,8 +49,9 @@
         "Provided technical assistance to the support team, enabling the resolution of tickets promptly and efficiently."
       ],
       "achievements": [
-        "Increased Senda's user base by 43% through the development of new modules, including voucher and recharge functionalities.",
-        "Established Grafana infrastructure to monitor all Senda modules with a high level of detail, ensuring reliability and proactive issue resolution."
+        "Increased Senda's user base by 43% through the development of new modules, including voucher, recharge and utilities functionalities.",
+        "Established Grafana infrastructure to monitor all Senda modules with a high level of detail, ensuring reliability and proactive issue resolution.",
+        "Designed and implemented new ETL workflows for service providers to enable data import and synchronization across the supply chain, resulting in two new partnerships and the addition of over 5,000 new products to the platform."
       ],
       "skills": ["REST APIs", "NestJS", "Payment Services", "Grafana"]
     },
