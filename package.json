@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "predeploy": "astro build",
-    "deploy": "gh-pages --nojekyll -d dist",
+    "add-domain": "echo edenysd.com > dist/CNAME",
+    "deploy": "pnpm run add-domain && gh-pages --nojekyll -d dist",
     "deploy:help": "gh-pages --help",
     "astro": "astro"
   },
