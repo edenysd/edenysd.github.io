@@ -389,6 +389,13 @@
       "releaseDate": "2023-12-03",
       "summary": "The disambiguation of author names focuses mainly on studying the problems of synonyms and homonyms. Using multiple AI/ML techniques, plus Rust-powered algorithms at critical points, we achieved best-in-class results in the LAGOS-AND dataset.",
       "url": ""
+    },
+    {
+      "name": "Procedure for Preparing Bibliographic Metadata Records in Author Name Disambiguation",
+      "publisher": "Journal of Library Metadata",
+      "releaseDate": "2025-07-03",
+      "summary": "The quality of metadata in bibliographic records can be compromised by issues of incompleteness and inaccuracy. One of the most significant challenges is the inaccurate representation of author names. In the specific case of metadata in the MARC21 format, the MARCQuality tool—developed by researchers at the Central University “Marta Abreu” of Las Villas—partially addresses these issues by unifying variations of the same author's name and resolving, to some extent, synonymy. However, limitations remain concerning homonymy, where multiple authors have the same name. This study aims to implement a solution that optimizes the preparation of MARC21 record fields for future use in neural network models designed for author name disambiguation. As these models are not yet available, the proposed approach focuses on structuring and adapting the fields to improve prediction accuracy. The solution is based on disambiguation techniques using LAGOS AND (Large, Gold Standard Dataset for Scholarly Author Name Disambiguation), as established in HFAND (Hybrid Framework for Author Name Disambiguation). Given the differences between MARC21 cataloged records and LAGOS AND publications, an analysis is necessary to establish correspondences between their fields. This analysis also incorporates the Dublin Core format, used by UCLV’s DSpace repository, to explore its potential integration into the MARCQuality tool. As a result, a structured procedure is developed to organize record fields for preprocessing and similarity metric calculations, facilitating their application in neural network models for author name disambiguation.",
+      "url": "https://doi.org/10.1080/19386389.2025.2523715"
     }
   ]
 }
