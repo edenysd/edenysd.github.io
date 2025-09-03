@@ -46,11 +46,13 @@
       "summary": "As a Backend Developer at Tropipay, I focused on designing and maintaining scalable backend solutions for payment services. My work involved creating innovative systems like Senda, enhancing user experience, and collaborating with cross-functional teams to resolve technical challenges efficiently.",
       "responsibilities": [
         "Designed and implemented the Senda backend, a suite of services enabling users to support their families through a variety of options.",
-        "Provided technical assistance to the support team, enabling the resolution of tickets promptly and efficiently."
+        "Provided technical assistance to the support team, enabling the resolution of tickets promptly and efficiently.",
+        "Collaborated with frontend developers to integrate APIs and ensure a seamless user experience.",
+        "Designed integration schedules and documentation for new service providers."
       ],
       "achievements": [
         "Increased Senda's user base by 43% through the development of new modules, including voucher, recharge and utilities functionalities.",
-        "Established Grafana infrastructure to monitor all Senda modules with a high level of detail, ensuring reliability and proactive issue resolution.",
+        "Established infrastructure to monitor all Senda modules with a high level of detail, ensuring reliability and proactive issue resolution.",
         "Designed and implemented new ETL workflows for service providers to enable data import and synchronization across the supply chain, resulting in two new partnerships and the addition of over 5,000 new products to the platform."
       ],
       "skills": ["REST APIs", "NestJS", "Payment Services", "Grafana"]

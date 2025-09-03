@@ -40,7 +40,9 @@ import { publications } from "@cv";
               {year}
             </time>
 
-            <p class="mr-6 text-sm text-skin-muted">{summary}</p>
+            <p class="mr-6 text-sm text-skin-muted print:line-clamp-3 print:text-ellipsis">
+              {summary}
+            </p>
           </div>
         );
       })
